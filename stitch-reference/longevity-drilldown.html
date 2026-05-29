@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elite Health AI - Longevity</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#7ad7c6",
+                        "surface-container": "#1f1f1f",
+                        "on-background": "#e2e2e2",
+                        "surface-container-highest": "#353535",
+                        "on-tertiary-container": "#3f6a7d",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1b1b1b",
+                        "on-primary": "#003730",
+                        "outline-variant": "#3e4946",
+                        "on-tertiary-fixed": "#001f2a",
+                        "on-error": "#690005",
+                        "surface-dim": "#131313",
+                        "secondary-container": "#494566",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface": "#131313",
+                        "on-primary-container": "#007164",
+                        "outline": "#879390",
+                        "on-secondary-container": "#bab4da",
+                        "surface-bright": "#393939",
+                        "background": "#131313",
+                        "tertiary-fixed": "#bee9ff",
+                        "tertiary": "#ffffff",
+                        "on-surface-variant": "#bdc9c5",
+                        "on-secondary-fixed-variant": "#474363",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#c8c2e9",
+                        "surface-variant": "#353535",
+                        "primary-fixed-dim": "#7ad7c6",
+                        "on-primary-fixed-variant": "#005046",
+                        "secondary-fixed-dim": "#c8c2e9",
+                        "primary-fixed": "#96f3e1",
+                        "tertiary-container": "#bee9ff",
+                        "inverse-primary": "#006b5e",
+                        "on-tertiary-fixed-variant": "#1e4c5f",
+                        "primary-container": "#96f3e1",
+                        "on-secondary": "#302c4b",
+                        "on-primary-fixed": "#00201b",
+                        "inverse-on-surface": "#303030",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary-fixed": "#e5deff",
+                        "on-tertiary": "#003546",
+                        "primary": "#ffffff",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#a1cde3",
+                        "inverse-surface": "#e2e2e2",
+                        "on-surface": "#e2e2e2",
+                        "on-secondary-fixed": "#1b1735"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap": "16px",
+                        "container-padding": "24px",
+                        "unit": "4px",
+                        "grid-gutter": "12px",
+                        "margin-mobile": "24px",
+                        "stack-xs": "4px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "metric-xl": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "metric-xl": ["56px", { "lineHeight": "1", "letterSpacing": "-0.05em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom Utilities for Glassmorphism & Effects */
+        .glass-card {
+            background-color: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 0.5px solid rgba(255, 255, 255, 0.12);
+        }
+        .glow-text {
+            text-shadow: 0 0 15px rgba(150, 243, 225, 0.6);
+        }
+        .glow-path {
+            filter: drop-shadow(0 0 6px rgba(150, 243, 225, 0.7));
+        }
+    </style>
+<style>
+    @keyframes breathe {
+        '0%, 100%': { transform: 'scale(1)', opacity: '0.8' },
+        '50%': { transform: 'scale(1.05)', opacity: '1' },
+    }
+    @keyframes morph {
+        0%, 100% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; transform: scale(1); }
+        33% { border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%; transform: scale(1.05); }
+        66% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; transform: scale(0.95); }
+    }
+    .sphere-base-cyan {
+        background: radial-gradient(circle at 30% 30%, #00E5FF, #0891B2 60%, #083344);
+        box-shadow: inset -15px -15px 40px rgba(0,0,0,0.5), inset 15px 15px 40px rgba(255,255,255,0.4), 0 0 40px rgba(0, 229, 255, 0.4);
+    }
+    .animate-morph-slow {
+        animation: morph 10s ease-in-out infinite alternate;
+    }
+    .animate-breathe-slow {
+        animation: breathe 8s ease-in-out infinite;
+    }
+</style></head>
+<body class="bg-[#000000] text-on-surface font-body-md min-h-screen overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Ethereal Background Aura -->
+<div class="fixed inset-0 z-0 pointer-events-none" style="background: radial-gradient(circle at 50% 25%, rgba(150, 243, 225, 0.08) 0%, transparent 60%);">
+</div>
+<!-- Decorative Texture (Satisfying data-alt requirement for background images) -->
+<div class="fixed inset-0 z-0 pointer-events-none opacity-[0.03] mix-blend-screen" data-alt="A highly macro, abstract digital rendering of microscopic cellular structures bathing in a bioluminescent, deep cyan glow against a pure void of OLED black. The texture creates a subtle, ethereal noise pattern that resembles flowing energy or pristine biological data. Lighting is cinematic and highly clinical, enforcing a premium dark-mode aesthetic focused on futuristic recovery and high-precision performance monitoring." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAMtyr573QwAUF_FDWV225UjWDy0HTfpPfexn1m5cplk0cOsGUBC_CveWI92i6QJ5enCruoJ-lbW9Y1_VillxGHkCQ4lUE7cAlSMiNhp9I2NT_OHrHYlIUsKjyfHbDjPmkO6zrNnYEeLZ4NaTqkmfybkS1nADR7lll0r8QnYyOMKOORxkPFg4lHyEQvENW0KbTkA9a_GgcurnGxD-zIbfmph5RqfllIMT3NdoDTRvWhXnc1D1jkctVfVpZT1d2ZzFRiKihKcoAmgF8w'); background-size: cover; background-position: center;">
+</div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b-[0.5px] border-white/10 flex items-center justify-between px-margin-mobile h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-unit">
+<div class="w-8 h-8 rounded-full bg-surface-bright flex items-center justify-center overflow-hidden border-[0.5px] border-white/20">
+<span class="material-symbols-outlined text-on-surface text-[20px]" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+</div>
+<div class="font-headline-lg-mobile text-headline-lg-mobile tracking-tighter text-on-surface font-extrabold uppercase">Elite Health AI</div>
+<button class="active:scale-95 duration-200 group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary-fixed-dim transition-colors">calendar_today</span>
+</button>
+</header>
+<!-- Main Canvas -->
+<main class="relative z-10 pt-28 pb-32 px-margin-mobile max-w-md mx-auto md:max-w-2xl flex flex-col gap-stack-gap">
+<!-- Hero: Longevity Orb -->
+<section class="flex flex-col items-center justify-center py-8">
+<h1 class="font-label-sm text-label-sm text-on-surface-variant tracking-[0.2em] uppercase mb-10">Longevity</h1>
+<div class="relative w-72 h-72 flex items-center justify-center mt-4 mb-4">
+<!-- Procedural 3D Sphere -->
+<div class="absolute inset-0 m-auto w-64 h-64 rounded-full sphere-base-cyan animate-morph-slow z-0"></div>
+<!-- Outer Glow/Breathing effect -->
+<div class="absolute inset-0 m-auto w-72 h-72 rounded-full border border-[#00E5FF]/20 bg-[#00E5FF]/5 animate-breathe-slow mix-blend-screen z-0"></div>
+<!-- Shadow -->
+<div class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-48 h-8 bg-[#00E5FF]/20 blur-xl rounded-full z-0"></div>
+<div class="relative z-10 flex flex-col items-center drop-shadow-lg">
+<span class="font-metric-xl text-metric-xl text-white glow-text tracking-tighter">0.82<span class="text-headline-lg-mobile">x</span></span>
+<span class="font-label-sm text-label-sm text-white/90 mt-1 uppercase tracking-widest">Pace of Aging</span>
+</div>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mt-10 tracking-wide uppercase">Rejuvenating</h2>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-gap">
+<!-- Bio vs Chrono Age Card -->
+<div class="glass-card rounded-xl p-container-padding flex flex-col justify-between md:col-span-2 group hover:border-white/30 transition-all duration-300 relative overflow-hidden">
+<div class="absolute inset-0 bg-primary-fixed/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="relative z-10 flex justify-between items-end mb-8">
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">Biological Age</div>
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-primary-fixed">28.4<span class="font-body-md text-body-md text-on-surface-variant ml-1">y</span></div>
+</div>
+<div class="text-right">
+<div class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">Chronological</div>
+<div class="font-headline-md text-headline-md text-primary opacity-90">32.0<span class="font-body-md text-body-md text-on-surface-variant ml-1">y</span></div>
+</div>
+</div>
+<!-- Slider Visualization -->
+<div class="relative z-10 h-3 w-full bg-black/40 rounded-full border-[0.5px] border-white/10 overflow-visible">
+<!-- Base Track -->
+<div class="absolute inset-y-0 left-0 bg-surface-bright rounded-full" style="width: 100%;"></div>
+<!-- Bio Age Fill -->
+<div class="absolute inset-y-0 left-0 bg-primary-fixed rounded-full shadow-[0_0_15px_rgba(150,243,225,0.6)]" style="width: 45%;"></div>
+<!-- Chrono Marker -->
+<div class="absolute top-1/2 -translate-y-1/2 w-1.5 h-6 bg-white rounded-full shadow-[0_0_10px_rgba(255,255,255,0.8)]" style="left: 60%;"></div>
+</div>
+</div>
+<!-- VO2 Max Trend -->
+<div class="glass-card rounded-xl p-container-padding flex flex-col md:col-span-2 group">
+<div class="flex justify-between items-start mb-2">
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">VO2 Max Trend</div>
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-1">54.2</div>
+</div>
+<div class="px-3 py-1 rounded-full border-[0.5px] border-primary-fixed/50 bg-primary-fixed/10">
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase">Superior</span>
+</div>
+</div>
+<!-- Area Chart -->
+<div class="w-full h-24 mt-4 relative">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 100 40">
+<defs>
+<lineargradient id="vo2-grad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#96f3e1" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#96f3e1" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- Fill -->
+<path d="M0,40 L0,30 C20,32 30,15 50,18 C70,21 85,8 100,5 L100,40 Z" fill="url(#vo2-grad)"></path>
+<!-- Stroke -->
+<path class="glow-path" d="M0,30 C20,32 30,15 50,18 C70,21 85,8 100,5" fill="none" stroke="#96f3e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<!-- Current Value Point -->
+<circle class="glow-path" cx="100" cy="5" fill="#ffffff" r="3" stroke="#96f3e1" stroke-width="2"></circle>
+</svg>
+</div>
+</div>
+<!-- Gait Symmetry -->
+<div class="glass-card rounded-xl p-container-padding flex flex-col items-center justify-center text-center">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-4 w-full text-left">Gait Symmetry</div>
+<div class="relative w-24 h-24 flex items-center justify-center mb-2">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<!-- Background ring -->
+<path class="text-white/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+<!-- Progress ring -->
+<path class="text-primary-fixed glow-path" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="98, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-headline-md text-headline-md text-primary">98<span class="text-body-md">%</span></span>
+</div>
+</div>
+</div>
+<!-- Stability -->
+<div class="glass-card rounded-xl p-container-padding flex flex-col justify-between">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Stability Index</div>
+<div class="flex flex-col mt-4">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary-fixed">HIGH</span>
+<span class="font-body-md text-body-md text-on-surface-variant mt-1">Minimal deviation detected during active phase.</span>
+</div>
+<!-- Aesthetic visual -->
+<div class="mt-6 flex items-end gap-1 h-8 opacity-60">
+<div class="w-full bg-primary-fixed rounded-t-sm" style="height: 40%"></div>
+<div class="w-full bg-primary-fixed rounded-t-sm" style="height: 60%"></div>
+<div class="w-full bg-primary-fixed rounded-t-sm shadow-[0_0_8px_rgba(150,243,225,0.8)]" style="height: 90%"></div>
+<div class="w-full bg-primary-fixed rounded-t-sm" style="height: 85%"></div>
+<div class="w-full bg-primary-fixed rounded-t-sm" style="height: 50%"></div>
+</div>
+</div>
+<!-- Protocol Adherence Checklist -->
+<div class="glass-card rounded-xl p-container-padding flex flex-col md:col-span-2">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-6">AI Protocol Adherence</div>
+<ul class="flex flex-col gap-4">
+<li class="flex items-center gap-4 group cursor-pointer">
+<div class="w-6 h-6 rounded-full border border-primary-fixed flex items-center justify-center bg-primary-fixed/20 shadow-[0_0_10px_rgba(150,243,225,0.3)]">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">check</span>
+</div>
+<span class="font-body-md text-body-md text-primary opacity-60 line-through">Zone 2 Cardio (45 min)</span>
+</li>
+<li class="flex items-center gap-4 group cursor-pointer">
+<div class="w-6 h-6 rounded-full border border-primary-fixed flex items-center justify-center bg-primary-fixed/20 shadow-[0_0_10px_rgba(150,243,225,0.3)]">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">check</span>
+</div>
+<span class="font-body-md text-body-md text-primary opacity-60 line-through">NMN &amp; Resveratrol Stack</span>
+</li>
+<li class="flex items-center gap-4 group cursor-pointer">
+<div class="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center group-hover:border-primary-fixed/50 transition-colors">
+<!-- Empty circle for uncompleted -->
+</div>
+<span class="font-body-md text-body-md text-primary group-hover:text-primary-fixed-dim transition-colors">Hyperbaric Oxygen Therapy</span>
+</li>
+</ul>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-xl bg-surface-container/80 backdrop-blur-2xl border-t-[0.5px] border-white/10 shadow-[0_-10px_20px_rgba(0,0,0,0.4)] fixed bottom-0 left-0 w-full flex justify-around items-center py-stack-md px-margin-mobile pb-[calc(16px+env(safe-area-inset-bottom))]">
+<!-- Home (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant gap-stack-xs hover:text-primary-fixed duration-300 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</button>
+<!-- Health (Active - Maps to Longevity context) -->
+<button class="flex flex-col items-center justify-center text-primary-fixed gap-stack-xs hover:text-primary-fixed duration-300 active:scale-90 transition-transform relative">
+<div class="absolute inset-0 bg-primary-fixed/10 blur-md rounded-full -z-10 scale-150"></div>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">query_stats</span>
+<span class="font-label-sm text-label-sm">Health</span>
+</button>
+<!-- Coach (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant gap-stack-xs hover:text-primary-fixed duration-300 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">psychology</span>
+<span class="font-label-sm text-label-sm">Coach</span>
+</button>
+<!-- Profile (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant gap-stack-xs hover:text-primary-fixed duration-300 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</button>
+</nav>
+</body></html>

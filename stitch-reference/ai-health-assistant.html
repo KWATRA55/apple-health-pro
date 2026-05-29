@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elite Health - KILO AI Coach</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed-dim": "#c8c2e9",
+                        "secondary-container": "#494566",
+                        "surface-variant": "#353535",
+                        "surface-container-highest": "#353535",
+                        "on-tertiary-fixed-variant": "#1e4c5f",
+                        "surface": "#131313",
+                        "on-secondary-container": "#bab4da",
+                        "on-surface": "#e2e2e2",
+                        "surface-container-low": "#1b1b1b",
+                        "on-secondary-fixed": "#1b1735",
+                        "primary-fixed-dim": "#7ad7c6",
+                        "on-tertiary-container": "#3f6a7d",
+                        "secondary": "#c8c2e9",
+                        "background": "#131313",
+                        "surface-bright": "#393939",
+                        "on-tertiary-fixed": "#001f2a",
+                        "error": "#ffb4ab",
+                        "on-primary-container": "#007164",
+                        "tertiary-container": "#bee9ff",
+                        "surface-tint": "#7ad7c6",
+                        "on-primary-fixed-variant": "#005046",
+                        "on-secondary-fixed-variant": "#474363",
+                        "surface-container": "#1f1f1f",
+                        "primary-container": "#96f3e1",
+                        "surface-container-high": "#2a2a2a",
+                        "on-background": "#e2e2e2",
+                        "primary": "#ffffff",
+                        "surface-dim": "#131313",
+                        "secondary-fixed": "#e5deff",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#a1cde3",
+                        "on-primary": "#003730",
+                        "on-tertiary": "#003546",
+                        "inverse-primary": "#006b5e",
+                        "on-error": "#690005",
+                        "inverse-surface": "#e2e2e2",
+                        "on-primary-fixed": "#00201b",
+                        "outline-variant": "#3e4946",
+                        "on-surface-variant": "#bdc9c5",
+                        "tertiary": "#ffffff",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "outline": "#879390",
+                        "on-secondary": "#302c4b",
+                        "tertiary-fixed": "#bee9ff",
+                        "inverse-on-surface": "#303030",
+                        "primary-fixed": "#96f3e1"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "stack-gap": "16px",
+                        "container-padding": "24px",
+                        "unit": "4px",
+                        "grid-gutter": "12px"
+                    },
+                    fontFamily: {
+                        "display-lg": ["Inter", "sans-serif"],
+                        "label-sm": ["Inter", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "headline-lg-mobile": ["Inter", "sans-serif"],
+                        "metric-xl": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "headline-lg": ["Inter", "sans-serif"]
+                    },
+                    fontSize: {
+                        "display-lg": ["48px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "600" }],
+                        "label-sm": ["12px", { lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "metric-xl": ["56px", { lineHeight: "1", letterSpacing: "-0.05em", fontWeight: "700" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "500" }],
+                        "headline-lg": ["32px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #000000; color: #e2e2e2; }
+        .glass-panel { background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(30px); border: 0.5px solid rgba(255, 255, 255, 0.12); }
+        .glass-panel-glowing { background: rgba(255, 255, 255, 0.04); backdrop-filter: blur(30px); border: 0.5px solid rgba(122, 215, 198, 0.3); box-shadow: 0 4px 30px rgba(122, 215, 198, 0.08); }
+        
+        /* Subtle mesh gradient mantle */
+        .mantle-bg {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1;
+            background: radial-gradient(circle at 50% 30%, rgba(122, 215, 198, 0.05) 0%, transparent 60%),
+                        radial-gradient(circle at 80% 80%, rgba(200, 194, 233, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        /* Hide scrollbar for chips */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="antialiased h-screen flex flex-col overflow-hidden font-body-md">
+<div class="mantle-bg"></div>
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-xl border-b border-white/10 shadow-none dark:bg-surface/10 flex justify-between items-center px-container-padding h-[72px] py-3 bg-black/20">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container border border-white/10 flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">person</span>
+</div>
+<h1 class="font-display-lg text-[20px] tracking-tighter text-primary dark:text-primary leading-none" style="font-size: 20px;">ELITE HEALTH</h1>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center text-primary dark:text-primary hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined">calendar_today</span>
+</button>
+</header>
+<!-- Biometric Context Widget -->
+<div class="fixed top-[64px] w-full z-40 px-container-padding py-2 flex justify-center">
+<div class="glass-panel rounded-full px-4 py-1 flex items-center gap-4 bg-white/5 border-white/5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed-dim">battery_charging_full</span>
+<span class="font-label-sm text-on-surface/60 text-[11px]">88% RECOVERY</span>
+</div>
+<div class="w-[1px] h-2 bg-white/10"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-error">local_fire_department</span>
+<span class="font-label-sm text-on-surface/60 text-[11px]">4.2 STRAIN</span>
+</div>
+</div>
+</div>
+<!-- Main Chat Canvas -->
+<main class="flex-1 overflow-y-auto pt-[120px] pb-[250px] px-container-padding md:px-0 md:max-w-3xl md:mx-auto w-full flex flex-col gap-stack-gap">
+<!-- Context Header -->
+<div class="flex flex-col items-center justify-center py-8">
+<div class="relative w-16 h-16 rounded-full glass-panel-glowing flex items-center justify-center mb-4">
+<div class="absolute inset-0 rounded-full border border-primary-fixed-dim/30 animate-[pulse_2s_ease-in-out_infinite]"></div>
+<span class="material-symbols-outlined text-primary-fixed-dim text-3xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<h2 class="font-display-lg text-[32px] tracking-tight text-primary mb-1">AI HEALTH COACH</h2>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-primary-fixed-dim animate-pulse"></div>
+<p class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-widest">Systems Analysis: ACTIVE</p>
+</div>
+</div>
+<!-- Chat Timeline -->
+<div class="flex flex-col gap-6 w-full">
+<!-- Previous Context AI Message -->
+<div class="flex justify-start w-full">
+<div class="glass-panel rounded-2xl rounded-tl-sm p-4 max-w-[95%] md:max-w-[85%] flex flex-col gap-3">
+<div class="flex items-center gap-2 mb-1 opacity-70">
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Biometric Update</span>
+</div>
+<p class="font-body-md text-on-surface/80">Your Autonomic Nervous System (ANS) balance has shifted slightly sympathetic overnight. HRV Z-Score is at -1.2, suggesting minor acute stress. I am recalibrating your readiness score.</p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex justify-end w-full">
+<div class="bg-surface-container border-[0.5px] border-white/5 rounded-2xl rounded-tr-sm p-4 max-w-[85%] shadow-sm">
+<p class="font-body-md text-on-surface">I've been feeling unusually fatigued during my morning runs. Should I adjust my training load today?</p>
+</div>
+</div>
+<!-- AI Message -->
+<div class="flex justify-start w-full">
+<div class="glass-panel-glowing rounded-2xl rounded-tl-sm p-5 max-w-[95%] md:max-w-[85%] flex flex-col gap-4">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[16px]" style="font-variation-settings: 'FILL' 1;">memory</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim uppercase">Analysis Complete</span>
+</div>
+<p class="font-body-md text-on-surface">Based on your overnight biometric data, I am detecting a slight deviation in your baseline recovery metrics. Your Central Nervous System (CNS) indicates accumulating strain.</p>
+<!-- Structured Data Table -->
+<div class="bg-black/40 rounded-xl border border-white/5 overflow-hidden my-2">
+<div class="px-4 py-2 border-b border-white/5 flex justify-between items-center bg-white/[0.02]">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Biometric Marker</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Status</span>
+</div>
+<div class="px-4 py-3 border-b border-white/5 flex justify-between items-center">
+<span class="font-body-md text-on-surface">Heart Rate Variability</span>
+<span class="font-body-md text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_down</span> 42ms (-15%)
+                            </span>
+</div>
+<div class="px-4 py-3 border-b border-white/5 flex justify-between items-center">
+<span class="font-body-md text-on-surface">Resting Heart Rate</span>
+<span class="font-body-md text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> 54bpm (+4)
+                            </span>
+</div>
+<div class="px-4 py-3 flex justify-between items-center">
+<span class="font-body-md text-on-surface">Sleep Efficiency</span>
+<span class="font-body-md text-primary-fixed-dim">91% (Optimal)</span>
+</div>
+</div>
+<p class="font-body-md text-on-surface">Recommendation: Downgrade today's session to a Zone 1 active recovery protocol (30-45 minutes max). Avoid high-intensity intervals to allow your CNS to stabilize.</p>
+</div>
+</div>
+<!-- User Message 2 -->
+<div class="flex justify-end w-full">
+<div class="bg-surface-container border-[0.5px] border-white/5 rounded-2xl rounded-tr-sm p-4 max-w-[85%] shadow-sm">
+<p class="font-body-md text-on-surface">What about injury risk if I decide to push through it anyway?</p>
+</div>
+</div>
+<!-- AI Message 2 -->
+<div class="flex justify-start w-full">
+<div class="glass-panel-glowing rounded-2xl rounded-tl-sm p-5 max-w-[95%] md:max-w-[85%] flex flex-col gap-4">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-error text-[16px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="font-label-sm text-label-sm text-error uppercase">Risk Assessment</span>
+</div>
+<p class="font-body-md text-on-surface">Pushing through today elevates your muscoskeletal injury risk by approximately 34%. Your recent gait symmetry data showed a slight 2% bias to the left leg, which often precedes overuse injuries when CNS fatigue is present.</p>
+</div>
+</div>
+<!-- AI Insights Modules -->
+<div class="mt-8 flex flex-col gap-4">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-1 h-4 bg-primary-fixed-dim rounded-full"></div>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest">Kilo Insights</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Metabolic Efficiency -->
+<div class="glass-panel rounded-xl p-4 flex flex-col gap-3 border-l-2 border-l-secondary-fixed-dim">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-secondary-fixed-dim uppercase">Metabolic Efficiency</span>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-[18px]">bolt</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="font-metric-xl text-3xl text-primary">High</span>
+</div>
+<div class="h-8 w-full bg-white/5 rounded-md relative overflow-hidden mt-1 flex items-end px-1 gap-1 pb-1">
+<div class="w-1/6 bg-secondary-fixed-dim/40 rounded-sm h-[30%]"></div>
+<div class="w-1/6 bg-secondary-fixed-dim/60 rounded-sm h-[50%]"></div>
+<div class="w-1/6 bg-secondary-fixed-dim/80 rounded-sm h-[40%]"></div>
+<div class="w-1/6 bg-secondary-fixed-dim rounded-sm h-[70%]"></div>
+<div class="w-1/6 bg-secondary-fixed-dim rounded-sm h-[85%]"></div>
+<div class="w-1/6 bg-primary-fixed-dim rounded-sm h-[95%]"></div>
+</div>
+</div>
+<!-- Recovery Forecast -->
+<div class="glass-panel rounded-xl p-4 flex flex-col gap-3 border-l-2 border-l-primary-fixed-dim">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-primary-fixed-dim uppercase">Recovery Forecast</span>
+<span class="material-symbols-outlined text-primary-fixed-dim text-[18px]">update</span>
+</div>
+<p class="font-body-md text-on-surface/90">You will be <strong class="text-primary-fixed-dim">PRIMED</strong> for your next high-intensity session in approximately:</p>
+<div class="font-metric-xl text-4xl text-primary mt-1">24<span class="text-xl text-on-surface-variant">h</span> 12<span class="text-xl text-on-surface-variant">m</span></div>
+</div>
+</div>
+</div><div class="mt-12 flex flex-col gap-6 pb-12">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<div class="w-1 h-4 bg-primary-fixed-dim rounded-full"></div>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest text-[11px]">Suggestive Analysis</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="glass-panel p-4 rounded-xl text-left hover:bg-white/10 transition-colors group">
+<span class="material-symbols-outlined text-primary-fixed-dim mb-2">bedtime</span>
+<p class="font-label-sm text-on-surface leading-tight">Analyze Sleep Consistency</p>
+</button>
+<button class="glass-panel p-4 rounded-xl text-left hover:bg-white/10 transition-colors group">
+<span class="material-symbols-outlined text-error mb-2">trending_up</span>
+<p class="font-label-sm text-on-surface leading-tight">Predict Overtraining Risk</p>
+</button>
+<button class="glass-panel p-4 rounded-xl text-left hover:bg-white/10 transition-colors group">
+<span class="material-symbols-outlined text-secondary-fixed-dim mb-2">restaurant</span>
+<p class="font-label-sm text-on-surface leading-tight">Check Nutritional Impact</p>
+</button>
+<button class="glass-panel p-4 rounded-xl text-left hover:bg-white/10 transition-colors group">
+<span class="material-symbols-outlined text-primary mb-2">qr_code_scanner</span>
+<p class="font-label-sm text-on-surface leading-tight">Morning Readiness Deep-Scan</p>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<div class="w-1 h-4 bg-secondary-fixed-dim rounded-full"></div>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest text-[11px]">Recovery Protocols</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="glass-panel px-4 py-3 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed-dim">self_improvement</span>
+<span class="font-body-md text-on-surface">NSDR Session (15m)</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</div>
+<div class="glass-panel px-4 py-3 rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed-dim">ac_unit</span>
+<span class="font-body-md text-on-surface">Cold Exposure Protocol</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Interaction Area -->
+<div class="fixed bottom-[80px] left-0 w-full z-40 flex flex-col gap-3 px-container-padding md:px-0 md:max-w-3xl md:left-1/2 md:-translate-x-1/2 pb-4 pt-12 bg-gradient-to-t from-black via-black/95 to-transparent">
+<!-- Suggestion Chips -->
+<div class="flex overflow-x-auto no-scrollbar gap-2 pb-1">
+<button class="whitespace-nowrap px-4 py-2 rounded-full glass-panel text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:border-white/30 transition-all">
+                Analyze CNS
+            </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full glass-panel text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:border-white/30 transition-all">
+                Running Form
+            </button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full glass-panel text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:border-white/30 transition-all">
+                Injury Risk
+            </button>
+</div>
+<!-- Chat Input Bar -->
+<div class="glass-panel rounded-3xl p-1.5 flex items-center gap-2 bg-surface-container/50 border-white/10">
+<button class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">add_circle</span>
+</button>
+<input class="flex-1 bg-transparent border-none text-on-surface placeholder-on-surface-variant/50 focus:ring-0 font-body-md px-1 h-10 outline-none" placeholder="Ask your AI Coach..." type="text"/>
+<button class="w-10 h-10 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors mr-1">
+<span class="material-symbols-outlined">mic</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-primary-fixed-dim text-on-primary-fixed-variant flex items-center justify-center shadow-[0_0_15px_rgba(122,215,198,0.3)] hover:opacity-90 transition-opacity shrink-0">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_upward</span>
+</button>
+</div>
+</div>
+<!-- BottomNavBar (Shared Component) -->
+<nav class="fixed bottom-0 w-full z-50 backdrop-blur-2xl rounded-t-xl border-t border-white/12 shadow-[0_-8px_32px_rgba(0,0,0,0.5)] bg-surface/10 dark:bg-surface/10 flex justify-around items-center h-20 px-4 pb-safe md:hidden">
+<!-- Inactive: Home -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant/40 hover:text-primary-fixed-dim/80 transition-colors active:scale-90 transition-transform duration-150 w-16">
+<span class="material-symbols-outlined mb-1 text-[24px]">home_health</span>
+<span class="font-label-sm text-[10px] uppercase tracking-widest">Home</span>
+</button>
+<!-- Inactive: Health -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant/40 hover:text-primary-fixed-dim/80 transition-colors active:scale-90 transition-transform duration-150 w-16">
+<span class="material-symbols-outlined mb-1 text-[24px]">monitoring</span>
+<span class="font-label-sm text-[10px] uppercase tracking-widest">Health</span>
+</button>
+<!-- Active: Coach -->
+<button class="flex flex-col items-center justify-center text-primary-fixed-dim drop-shadow-[0_0_8px_rgba(122,215,198,0.4)] active:scale-90 transition-transform duration-150 w-16">
+<span class="material-symbols-outlined mb-1 text-[24px]" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<span class="font-label-sm text-[10px] uppercase tracking-widest">Coach</span>
+</button>
+<!-- Inactive: Profile -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant/40 hover:text-primary-fixed-dim/80 transition-colors active:scale-90 transition-transform duration-150 w-16">
+<span class="material-symbols-outlined mb-1 text-[24px]">person</span>
+<span class="font-label-sm text-[10px] uppercase tracking-widest">Profile</span>
+</button>
+</nav>
+<!-- Desktop Nav Fallback (for responsive correctness, though requested mobile layout dominant) -->
+<nav class="hidden md:flex fixed top-[72px] w-full z-40 bg-black/50 backdrop-blur-md border-b border-white/5 justify-center py-2 gap-8">
+<button class="text-on-surface-variant text-sm font-medium tracking-wide py-2 hover:text-primary transition-colors">HOME</button>
+<button class="text-on-surface-variant text-sm font-medium tracking-wide py-2 hover:text-primary transition-colors">HEALTH</button>
+<button class="text-primary-fixed-dim text-sm font-bold tracking-wide py-2 border-b-2 border-primary-fixed-dim">COACH</button>
+<button class="text-on-surface-variant text-sm font-medium tracking-wide py-2 hover:text-primary transition-colors">PROFILE</button>
+</nav>
+</body></html>

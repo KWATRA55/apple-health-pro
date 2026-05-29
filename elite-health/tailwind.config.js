@@ -1,0 +1,191 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './app/**/*.{js,jsx,ts,tsx}',
+    './src/**/*.{js,jsx,ts,tsx}',
+  ],
+  presets: [require('nativewind/preset')],
+  theme: {
+    extend: {
+      colors: {
+        oled: '#000000',
+        obsidian: {
+          DEFAULT: '#121214',
+          900: '#121214',
+          800: '#161618',
+          700: '#18181B',
+          600: '#1C1C1F',
+        },
+        slate: '#121214',
+        carbon: '#18181B',
+        graphite: '#1C1C1F',
+        accent: {
+          volt: '#CCFF00',
+          cyan: '#00E5FF',
+          crimson: '#FF3366',
+          amber: '#FFB800',
+          lime: '#CCFF00',
+          red: '#FF336680',
+          teal: '#14B8A6',
+          neon: '#39FF14',
+          plasma: '#BF40FF',
+        },
+        aurora: {
+          cyan: '#00E5FF',
+          teal: '#0D9488',
+          cobalt: '#1E3A8A',
+          void: '#020617',
+        },
+        glass: {
+          surface: 'rgba(18, 18, 20, 0.55)',
+          elevated: 'rgba(22, 22, 24, 0.65)',
+          border: 'rgba(255, 255, 255, 0.06)',
+          'border-glow': 'rgba(255, 255, 255, 0.12)',
+          'inner-border': 'rgba(255, 255, 255, 0.08)',
+        },
+        pillar: {
+          readiness: '#14B8A6',
+          resilience: '#A855F7',
+          longevity: '#00E5FF',
+        },
+        ice: '#FAFAFA',
+        steel: '#8A8F93',
+        smoke: '#636870',
+        inverse: '#000000',
+        'border-dim': 'rgba(255,255,255,0.05)',
+        'border-mid': 'rgba(255,255,255,0.08)',
+        'border-glow': 'rgba(255,255,255,0.12)',
+        data: {
+          green: '#30D158',
+          blue: '#0A84FF',
+          yellow: '#FFD60A',
+          red: '#FF453A',
+        },
+        surface: {
+          glass: 'rgba(255, 255, 255, 0.04)',
+          elevated: 'rgba(255, 255, 255, 0.06)',
+        },
+        'edge-border': 'rgba(255, 255, 255, 0.10)',
+        // ── Stitch Design Tokens ───────────────────────────────────────────
+        'stitch': {
+          // Primary (teal/mint) — Readiness
+          'primary-fixed': '#96f3e1',
+          'primary-fixed-dim': '#7ad7c6',
+          'primary-container': '#96f3e1',
+          'on-primary-container': '#007164',
+          'on-primary-fixed': '#00201b',
+          'on-primary-fixed-variant': '#005046',
+          // Secondary (purple) — Resilience
+          'secondary-fixed': '#e5deff',
+          'secondary-fixed-dim': '#c8c2e9',
+          'secondary-container': '#494566',
+          'on-secondary-container': '#bab4da',
+          'on-secondary-fixed': '#1b1735',
+          'on-secondary-fixed-variant': '#474363',
+          // Tertiary (cyan/blue) — Longevity
+          'tertiary-fixed': '#bee9ff',
+          'tertiary-fixed-dim': '#a1cde3',
+          'tertiary-container': '#bee9ff',
+          'on-tertiary-container': '#3f6a7d',
+          'on-tertiary-fixed': '#001f2a',
+          'on-tertiary-fixed-variant': '#1e4c5f',
+          // Surfaces
+          'surface': '#131313',
+          'surface-dim': '#131313',
+          'surface-bright': '#393939',
+          'surface-container': '#1f1f1f',
+          'surface-container-low': '#1b1b1b',
+          'surface-container-lowest': '#0e0e0e',
+          'surface-container-high': '#2a2a2a',
+          'surface-container-highest': '#353535',
+          'surface-variant': '#353535',
+          'surface-tint': '#7ad7c6',
+          // On-surfaces
+          'on-surface': '#e2e2e2',
+          'on-surface-variant': '#bdc9c5',
+          'on-background': '#e2e2e2',
+          // Outline
+          'outline': '#879390',
+          'outline-variant': '#3e4946',
+          // Error
+          'error': '#ffb4ab',
+          'error-container': '#93000a',
+          'on-error': '#690005',
+          'on-error-container': '#ffdad6',
+          // Inverse
+          'inverse-primary': '#006b5e',
+          'inverse-surface': '#e2e2e2',
+          'inverse-on-surface': '#303030',
+          // Legacy primary/secondary/tertiary for simpler usage
+          'primary': '#ffffff',
+          'secondary': '#c8c2e9',
+          'tertiary': '#ffffff',
+          // Pillar colors
+          'pillar-readiness': '#14B8A6',
+          'pillar-resilience': '#A855F7',
+          'pillar-longevity': '#00E5FF',
+          // On-primary / secondary / tertiary
+          'on-primary': '#003730',
+          'on-secondary': '#302c4b',
+          'on-tertiary': '#003546',
+          // Glass panel colors
+          'glass': 'rgba(255,255,255,0.04)',
+          'glass-hover': 'rgba(255,255,255,0.06)',
+          'border': 'rgba(255,255,255,0.08)',
+          'border-strong': 'rgba(255,255,255,0.12)',
+          'border-dim': 'rgba(255,255,255,0.05)',
+          'border-accent': 'rgba(255,255,255,0.18)',
+          // Data / status
+          'success': '#30D158',
+          'warning': '#FFD60A',
+          'error-display': '#FF453A',
+          // Text tiers
+          'dim-text': 'rgba(255,255,255,0.40)',
+          'muted-text': 'rgba(255,255,255,0.55)',
+          'brand-text': 'rgba(255,255,255,0.85)',
+          // Background
+          'bg': '#000000',
+        },
+      },
+      fontFamily: {
+        sans: ['SF Pro Display', 'Inter', 'System', 'sans-serif'],
+        mono: ['JetBrains Mono', 'SF Mono', 'Menlo', 'monospace'],
+      },
+      fontSize: {
+        micro: ['10px', { lineHeight: '12px', letterSpacing: '0.08em' }],
+        small: ['13px', { lineHeight: '16px' }],
+        body: ['15px', { lineHeight: '20px' }],
+        header: ['18px', { lineHeight: '22px', letterSpacing: '-0.01em' }],
+        title: ['24px', { lineHeight: '28px', letterSpacing: '-0.02em' }],
+        metric: ['34px', { lineHeight: '36px', letterSpacing: '-0.03em' }],
+        hero: ['52px', { lineHeight: '52px', letterSpacing: '-0.04em' }],
+        // Stitch typography scale
+        'stitch-label-sm': ['12px', { lineHeight: '14.4px', letterSpacing: '0.05em', fontWeight: '500' }],
+        'stitch-body-md': ['16px', { lineHeight: '25.6px', fontWeight: '400' }],
+        'stitch-body-lg': ['18px', { lineHeight: '28.8px', fontWeight: '400' }],
+        'stitch-headline-md': ['24px', { lineHeight: '31.2px', fontWeight: '500' }],
+        'stitch-headline-lg': ['32px', { lineHeight: '38.4px', letterSpacing: '-0.02em', fontWeight: '600' }],
+        'stitch-display-lg': ['48px', { lineHeight: '52.8px', letterSpacing: '-0.04em', fontWeight: '600' }],
+        'stitch-metric-xl': ['56px', { lineHeight: '56px', letterSpacing: '-0.05em', fontWeight: '700' }],
+      },
+      borderRadius: {
+        card: '16px',
+        pill: '9999px',
+        'stitch-DEFAULT': '4px',
+        'stitch-lg': '8px',
+        'stitch-xl': '12px',
+      },
+      spacing: {
+        'stitch-unit': '4px',
+        'stitch-stack': '16px',
+        'stitch-gutter': '12px',
+        'stitch-container': '24px',
+      },
+      boxShadow: {
+        'inner-press': 'inset 0 1px 3px rgba(0,0,0,0.6)',
+        'ring-glow': '0 0 20px rgba(204, 255, 0, 0.15)',
+      },
+    },
+  },
+  plugins: [],
+}

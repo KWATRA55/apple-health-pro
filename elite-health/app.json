@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "Elite Health",
+    "slug": "elite-health",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "scheme": "elite-health",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.shashwat.healthkit.app",
+      "infoPlist": {
+        "NSHealthShareUsageDescription": "Elite Health reads your Apple Health data to compute Recovery, Strain, and Sleep scores.",
+        "NSHealthUpdateUsageDescription": "Elite Health writes workout and mindfulness data to Apple Health.",
+        "NSHealthClinicalHealthRecordsShareUsageDescription": "Elite Health can read your clinical health records for deeper analysis.",
+        "UIBackgroundModes": [
+          "fetch",
+          "processing"
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#000000"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.shashwat.healthkit.app"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": []
+        }
+      ],
+      "expo-sqlite",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "deploymentTarget": "15.1"
+          }
+        }
+      ],
+      [
+        "@kingstinct/react-native-healthkit",
+        {
+          "background": false
+        }
+      ],
+      "expo-background-task",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Elite Health uses your photos to analyze meals and workouts with Gemini Vision.",
+          "cameraPermission": "Elite Health uses your camera to capture meal and workout photos for analysis."
+        }
+      ]
+    ]
+  }
+}

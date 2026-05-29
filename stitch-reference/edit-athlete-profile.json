@@ -1,0 +1,289 @@
+{
+  "screenshot": {
+    "name": "projects/10650374066774271530/files/4618139721078628454",
+    "downloadUrl": "https://lh3.googleusercontent.com/aida/ADBb0ug9CEaCAJO9LHugmCnajE0DMo2r53ncE5X2sGJ3tYn09yUyg7Sq39B5Q5IlHIjvpTeMn8vOQjPNRHu6SvsAnzYrrQEg-HXfgH4A9eSeWgzTNoWoiu5uQ2Hnbgf0MtWh0HArJYS5SzSONKohxIy7wssdMfrmFnZszdifNj5v3Bjw6Z_KjaanLIGk1jTe0_TF4x9B_zyQupEz79JwUxID9RxQIh0DpXx52bKRlDFKh9-h_PmECt5HM2iSVht-"
+  },
+  "htmlCode": {
+    "name": "projects/10650374066774271530/files/5275324905632840325",
+    "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1MjVmNWMxMTUwMDUwN2M0ZDZkMTIwMWQxNmEzEgsSBxC3j4K7iQsYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDY1MDM3NDA2Njc3NDI3MTUzMA&filename=&opi=89354086",
+    "mimeType": "text/html"
+  },
+  "id": "bf8eef4b5d8f4f309b6917015cabd68b",
+  "generatedBy": "figaro_agent",
+  "width": "780",
+  "height": "2876",
+  "title": "Edit Athlete Profile",
+  "prompt": "Create a high-fidelity 'Edit Profile' screen for Elite Health AI. The design should be an extension of the Athlete Profile {{DATA:SCREEN:SCREEN_11}}, using the 'Aura Kinetic' dark mode design system. \n\nKey elements:\n1. Header: 'Edit Profile' title with a 'Save' button in the top right (accent-cyan) and a back arrow in the top left.\n2. Avatar Section: Large circular avatar with an 'Edit Photo' overlay/button.\n3. Personal Info Section: Glassmorphic input fields for Name, Professional Specialization (e.g., 'Endurance Specialist'), and Location.\n4. Physical Biometrics Section: Fields for Height, Weight, Biological Age (as a reference), and Gender. Use JetBrains Mono for numeric values.\n5. Goal Settings: Interactive selectors or sliders for 'Daily Strain Target' and 'Bedtime Preference'.\n6. Account & Privacy: Links to 'Sync HealthKit', 'Privacy Settings', and 'Export Data (CSV)'.\n7. Visual Style: OLED black background, obsidian-900 card containers with 16-20px radius, subtle cyan/teal mesh gradients, and Inter/SF Pro Display typography. Ensure consistent padding (16-20px) and a premium, high-performance feel.",
+  "name": "projects/10650374066774271530/screens/bf8eef4b5d8f4f309b6917015cabd68b",
+  "theme": {
+    "colorMode": "DARK",
+    "font": "INTER",
+    "roundness": "ROUND_EIGHT",
+    "customColor": "#99f6e4",
+    "headlineFont": "INTER",
+    "bodyFont": "INTER",
+    "labelFont": "INTER",
+    "namedColors": {
+      "primary_container": "#96f3e1",
+      "surface_variant": "#353535",
+      "inverse_surface": "#e2e2e2",
+      "on_error": "#690005",
+      "outline_variant": "#3e4946",
+      "secondary_fixed": "#e5deff",
+      "on_secondary": "#302c4b",
+      "primary": "#ffffff",
+      "on_secondary_fixed": "#1b1735",
+      "primary_fixed": "#96f3e1",
+      "on_primary_container": "#007164",
+      "surface_tint": "#7ad7c6",
+      "surface_container_low": "#1b1b1b",
+      "on_surface": "#e2e2e2",
+      "secondary": "#c8c2e9",
+      "secondary_fixed_dim": "#c8c2e9",
+      "on_primary": "#003730",
+      "inverse_primary": "#006b5e",
+      "surface_container": "#1f1f1f",
+      "secondary_container": "#494566",
+      "tertiary_fixed": "#bee9ff",
+      "background": "#131313",
+      "tertiary_container": "#bee9ff",
+      "primary_fixed_dim": "#7ad7c6",
+      "outline": "#879390",
+      "inverse_on_surface": "#303030",
+      "on_tertiary_container": "#3f6a7d",
+      "surface_container_lowest": "#0e0e0e",
+      "surface": "#131313",
+      "surface_container_high": "#2a2a2a",
+      "tertiary_fixed_dim": "#a1cde3",
+      "on_tertiary_fixed_variant": "#1e4c5f",
+      "on_surface_variant": "#bdc9c5",
+      "error_container": "#93000a",
+      "error": "#ffb4ab",
+      "surface_container_highest": "#353535",
+      "on_tertiary": "#003546",
+      "surface_bright": "#393939",
+      "on_secondary_container": "#bab4da",
+      "on_error_container": "#ffdad6",
+      "surface_dim": "#131313",
+      "on_secondary_fixed_variant": "#474363",
+      "on_primary_fixed_variant": "#005046",
+      "on_background": "#e2e2e2",
+      "on_primary_fixed": "#00201b",
+      "tertiary": "#ffffff",
+      "on_tertiary_fixed": "#001f2a"
+    },
+    "designMd": "---\nname: Aura Kinetic\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1b1b1b'\n  surface-container: '#1f1f1f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e2e2e2'\n  on-surface-variant: '#bdc9c5'\n  inverse-surface: '#e2e2e2'\n  inverse-on-surface: '#303030'\n  outline: '#879390'\n  outline-variant: '#3e4946'\n  surface-tint: '#7ad7c6'\n  primary: '#ffffff'\n  on-primary: '#003730'\n  primary-container: '#96f3e1'\n  on-primary-container: '#007164'\n  inverse-primary: '#006b5e'\n  secondary: '#c8c2e9'\n  on-secondary: '#302c4b'\n  secondary-container: '#494566'\n  on-secondary-container: '#bab4da'\n  tertiary: '#ffffff'\n  on-tertiary: '#003546'\n  tertiary-container: '#bee9ff'\n  on-tertiary-container: '#3f6a7d'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#96f3e1'\n  primary-fixed-dim: '#7ad7c6'\n  on-primary-fixed: '#00201b'\n  on-primary-fixed-variant: '#005046'\n  secondary-fixed: '#e5deff'\n  secondary-fixed-dim: '#c8c2e9'\n  on-secondary-fixed: '#1b1735'\n  on-secondary-fixed-variant: '#474363'\n  tertiary-fixed: '#bee9ff'\n  tertiary-fixed-dim: '#a1cde3'\n  on-tertiary-fixed: '#001f2a'\n  on-tertiary-fixed-variant: '#1e4c5f'\n  background: '#131313'\n  on-background: '#e2e2e2'\n  surface-variant: '#353535'\ntypography:\n  display-lg:\n    fontFamily: Inter\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.1'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Inter\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Inter\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Inter\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-sm:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\n  metric-xl:\n    fontFamily: Inter\n    fontSize: 56px\n    fontWeight: '700'\n    lineHeight: '1'\n    letterSpacing: -0.05em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 4px\n  container-padding: 24px\n  stack-gap: 16px\n  grid-gutter: 12px\n---\n\n## Brand & Style\n\nThe design system is engineered for elite athletes and clinical sports scientists. It marries the precision of medical data with the premium, lifestyle-focused aesthetic of high-end consumer electronics. The personality is **Clinical yet Ethereal**—it avoids the aggressive, high-friction visuals of typical fitness apps in favor of a calm, \"flow-state\" environment.\n\nThe design style is a sophisticated **Dark-Mode Glassmorphism**. By utilizing an OLED black foundation, the interface allows pastel data visualizations to \"float\" and \"glow\" without visual noise. Every element feels like a high-precision instrument encased in frosted glass, emphasizing clarity, recovery, and long-term performance over short-term intensity.\n\n## Colors\n\nThe palette is anchored in an absolute **OLED Black (#000000)** to maximize contrast and battery efficiency on mobile devices. Data is categorized through a specific \"Soft Glow\" logic:\n\n*   **Readiness & Recovery:** Pastel Mint (#99F6E4) – The primary \"Go\" state.\n*   **Resilience & Defense:** Soft Lavender (#DDD6FE) – Used for immunity and structural health metrics.\n*   **Longevity & Baseline:** Airy Cyan (#BAE6FD) – Used for historical data and steady-state vitals.\n*   **Strain & Output:** Pale Lime (#ECFCCB) – A muted, high-visibility \"Volt\" for active performance.\n*   **Critical Alerts:** Soft Rose (#FECDD3) – A non-threatening but urgent indicator for over-exertion or injury risk.\n\nBackgrounds are never solid grey; they are either pure black or translucent layers with subtle backdrop blurs.\n\n## Typography\n\nThis design system utilizes **Inter** across all roles to maintain a sleek, utilitarian, and highly legible aesthetic (as a widely available and highly optimized alternative to SF Pro). \n\n**Display and Metrics:** For large numerical data (Heart Rate, VO2 Max, Strain Scores), use the `metric-xl` style with tight letter spacing. This emphasizes the \"data-first\" nature of the product.\n**Headings:** Use Semi-Bold weights with slight negative letter spacing to mimic premium editorial layouts.\n**Body:** Maintain a generous line height (1.6) to ensure medical descriptions and recovery protocols remain readable during movement.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fluid \"App-Canvas\" model**. Content is housed within nested containers that emphasize vertical flow.\n\n*   **Mobile:** 4-column grid with 24px side margins. Elements use \"Stacking\" logic where cards are separated by a 16px gap.\n*   **Desktop/Tablet:** 12-column grid. Detailed data views use a \"Dashboard\" layout where primary vitals are pinned to the left or top, and secondary analytics expand into a modular masonry grid.\n*   **Rhythm:** All spacing is based on a 4px baseline grid to ensure mathematical alignment of frosted glass borders.\n\n## Elevation & Depth\n\nDepth is achieved through **Backdrop Refraction** rather than traditional drop shadows.\n\n1.  **Base Layer:** Pure #000000.\n2.  **Mantle Layer:** Subtle mesh gradients (using the brand palette at 5% opacity) that shift slowly in the background to suggest \"life.\"\n3.  **Glass Layer (Surface):** A background blur (20px to 40px) with a semi-transparent white fill (`rgba(255, 255, 255, 0.04)`).\n4.  **The \"Strobe\" Edge:** Every glass container must have an ultra-thin 0.5px or 1px border (`rgba(255, 255, 255, 0.12)`). This catches the eye and defines the shape against the black void.\n5.  **Interactive State:** On tap or hover, the border opacity increases, and a subtle inner glow of the primary pastel color is applied.\n\n## Shapes\n\nThe shape language is **Ultra-Soft and Organic**. \n- **Standard Cards:** Use a 24px radius (`rounded-xl` in this system) to create a friendly, \"hand-held\" feel.\n- **Buttons and Chips:** Use a 16px radius.\n- **Data Points:** Use perfect circles or \"pill\" shapes for progress bars.\n\nAvoid all sharp corners. The goal is to make the interface feel like a single, continuous piece of molded glass and liquid light.\n\n## Components\n\n**Buttons:** \nPrimary buttons use a \"Glow-Fill\" style—a solid pastel background with black text. Secondary buttons are \"Glass-Ghost\" style—frosted backgrounds with white text and a 0.5px border.\n\n**Cards & Modules:** \nEvery card must utilize `backdrop-filter: blur()`. Labels inside cards should use the `label-sm` style in a muted 60% opacity white, while the data itself is rendered in the full-saturation pastel accent color.\n\n**Input Fields:** \nMinimalist underlines or subtle glass troughs. The focus state is indicated by a soft outer glow in the Primary Mint color, rather than a thick border change.\n\n**Biological Progress Rings:** \nUse thick, rounded stroke ends. Background tracks are 10% opacity of the accent color. The active track should have a \"bloom\" effect (a soft shadow of the same color) to appear as if it is emitting light.\n\n**Charts:** \nLine charts should use \"Bézier\" smoothing. Area charts use a vertical gradient from the pastel accent (top) to transparent (bottom). No grid lines are visible; use only a single baseline.",
+    "colorVariant": "FIDELITY",
+    "overridePrimaryColor": "#99f6e4",
+    "overrideSecondaryColor": "#ddd6fe",
+    "overrideTertiaryColor": "#bae6fd",
+    "overrideNeutralColor": "#000000",
+    "spacingScale": 2,
+    "typography": {
+      "body-md": {
+        "fontFamily": "Inter",
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "lineHeight": "1.6"
+      },
+      "headline-md": {
+        "fontFamily": "Inter",
+        "fontSize": "24px",
+        "fontWeight": "500",
+        "lineHeight": "1.3"
+      },
+      "metric-xl": {
+        "fontFamily": "Inter",
+        "fontSize": "56px",
+        "fontWeight": "700",
+        "lineHeight": "1",
+        "letterSpacing": "-0.05em"
+      },
+      "display-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "48px",
+        "fontWeight": "600",
+        "lineHeight": "1.1",
+        "letterSpacing": "-0.04em"
+      },
+      "label-sm": {
+        "fontFamily": "Inter",
+        "fontSize": "12px",
+        "fontWeight": "500",
+        "lineHeight": "1.2",
+        "letterSpacing": "0.05em"
+      },
+      "headline-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "32px",
+        "fontWeight": "600",
+        "lineHeight": "1.2",
+        "letterSpacing": "-0.02em"
+      },
+      "body-lg": {
+        "fontFamily": "Inter",
+        "fontSize": "18px",
+        "fontWeight": "400",
+        "lineHeight": "1.6"
+      },
+      "headline-lg-mobile": {
+        "fontFamily": "Inter",
+        "fontSize": "28px",
+        "fontWeight": "600",
+        "lineHeight": "1.2"
+      }
+    },
+    "spacing": {
+      "container-padding": "24px",
+      "unit": "4px",
+      "stack-gap": "16px",
+      "grid-gutter": "12px"
+    },
+    "headlineFontFamily": "Inter",
+    "bodyFontFamily": "Inter",
+    "labelFontFamily": "Inter"
+  },
+  "deviceType": "MOBILE",
+  "screenType": "DESIGN",
+  "screenMetadata": {
+    "agentType": "PRO_AGENT",
+    "status": "COMPLETE",
+    "displayMode": "HTML"
+  },
+  "designSystem": {
+    "name": "assets/968710089f69494b82aadf76141aaf2b",
+    "designSystem": {
+      "displayName": "Aura Kinetic",
+      "styleGuidelines": "## Brand & Style\n\nThe design system is engineered for elite athletes and clinical sports scientists. It marries the precision of medical data with the premium, lifestyle-focused aesthetic of high-end consumer electronics. The personality is **Clinical yet Ethereal**—it avoids the aggressive, high-friction visuals of typical fitness apps in favor of a calm, \"flow-state\" environment.\n\nThe design style is a sophisticated **Dark-Mode Glassmorphism**. By utilizing an OLED black foundation, the interface allows pastel data visualizations to \"float\" and \"glow\" without visual noise. Every element feels like a high-precision instrument encased in frosted glass, emphasizing clarity, recovery, and long-term performance over short-term intensity.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fluid \"App-Canvas\" model**. Content is housed within nested containers that emphasize vertical flow.\n\n*   **Mobile:** 4-column grid with 24px side margins. Elements use \"Stacking\" logic where cards are separated by a 16px gap.\n*   **Desktop/Tablet:** 12-column grid. Detailed data views use a \"Dashboard\" layout where primary vitals are pinned to the left or top, and secondary analytics expand into a modular masonry grid.\n*   **Rhythm:** All spacing is based on a 4px baseline grid to ensure mathematical alignment of frosted glass borders.\n\n## Elevation & Depth\n\nDepth is achieved through **Backdrop Refraction** rather than traditional drop shadows.\n\n1.  **Base Layer:** Pure #000000.\n2.  **Mantle Layer:** Subtle mesh gradients (using the brand palette at 5% opacity) that shift slowly in the background to suggest \"life.\"\n3.  **Glass Layer (Surface):** A background blur (20px to 40px) with a semi-transparent white fill (`rgba(255, 255, 255, 0.04)`).\n4.  **The \"Strobe\" Edge:** Every glass container must have an ultra-thin 0.5px or 1px border (`rgba(255, 255, 255, 0.12)`). This catches the eye and defines the shape against the black void.\n5.  **Interactive State:** On tap or hover, the border opacity increases, and a subtle inner glow of the primary pastel color is applied.\n\n## Components\n\n**Buttons:** \nPrimary buttons use a \"Glow-Fill\" style—a solid pastel background with black text. Secondary buttons are \"Glass-Ghost\" style—frosted backgrounds with white text and a 0.5px border.\n\n**Cards & Modules:** \nEvery card must utilize `backdrop-filter: blur()`. Labels inside cards should use the `label-sm` style in a muted 60% opacity white, while the data itself is rendered in the full-saturation pastel accent color.\n\n**Input Fields:** \nMinimalist underlines or subtle glass troughs. The focus state is indicated by a soft outer glow in the Primary Mint color, rather than a thick border change.\n\n**Biological Progress Rings:** \nUse thick, rounded stroke ends. Background tracks are 10% opacity of the accent color. The active track should have a \"bloom\" effect (a soft shadow of the same color) to appear as if it is emitting light.\n\n**Charts:** \nLine charts should use \"Bézier\" smoothing. Area charts use a vertical gradient from the pastel accent (top) to transparent (bottom). No grid lines are visible; use only a single baseline.",
+      "theme": {
+        "colorMode": "DARK",
+        "font": "INTER",
+        "roundness": "ROUND_EIGHT",
+        "customColor": "#99f6e4",
+        "headlineFont": "INTER",
+        "bodyFont": "INTER",
+        "labelFont": "INTER",
+        "namedColors": {
+          "tertiary_container": "#bee9ff",
+          "primary_fixed_dim": "#7ad7c6",
+          "background": "#131313",
+          "tertiary_fixed": "#bee9ff",
+          "secondary_container": "#494566",
+          "inverse_primary": "#006b5e",
+          "surface_container": "#1f1f1f",
+          "on_primary": "#003730",
+          "secondary_fixed_dim": "#c8c2e9",
+          "secondary": "#c8c2e9",
+          "on_surface": "#e2e2e2",
+          "surface_tint": "#7ad7c6",
+          "surface_container_low": "#1b1b1b",
+          "primary_fixed": "#96f3e1",
+          "on_secondary_fixed": "#1b1735",
+          "on_primary_container": "#007164",
+          "secondary_fixed": "#e5deff",
+          "outline_variant": "#3e4946",
+          "on_secondary": "#302c4b",
+          "primary": "#ffffff",
+          "on_error": "#690005",
+          "inverse_surface": "#e2e2e2",
+          "primary_container": "#96f3e1",
+          "surface_variant": "#353535",
+          "on_primary_fixed": "#00201b",
+          "on_tertiary_fixed": "#001f2a",
+          "tertiary": "#ffffff",
+          "on_background": "#e2e2e2",
+          "on_primary_fixed_variant": "#005046",
+          "on_secondary_fixed_variant": "#474363",
+          "surface_dim": "#131313",
+          "on_error_container": "#ffdad6",
+          "on_secondary_container": "#bab4da",
+          "on_tertiary": "#003546",
+          "surface_bright": "#393939",
+          "error": "#ffb4ab",
+          "surface_container_highest": "#353535",
+          "error_container": "#93000a",
+          "on_surface_variant": "#bdc9c5",
+          "on_tertiary_fixed_variant": "#1e4c5f",
+          "tertiary_fixed_dim": "#a1cde3",
+          "surface_container_lowest": "#0e0e0e",
+          "surface": "#131313",
+          "surface_container_high": "#2a2a2a",
+          "on_tertiary_container": "#3f6a7d",
+          "inverse_on_surface": "#303030",
+          "outline": "#879390"
+        },
+        "designMd": "---\nname: Aura Kinetic\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1b1b1b'\n  surface-container: '#1f1f1f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e2e2e2'\n  on-surface-variant: '#bdc9c5'\n  inverse-surface: '#e2e2e2'\n  inverse-on-surface: '#303030'\n  outline: '#879390'\n  outline-variant: '#3e4946'\n  surface-tint: '#7ad7c6'\n  primary: '#ffffff'\n  on-primary: '#003730'\n  primary-container: '#96f3e1'\n  on-primary-container: '#007164'\n  inverse-primary: '#006b5e'\n  secondary: '#c8c2e9'\n  on-secondary: '#302c4b'\n  secondary-container: '#494566'\n  on-secondary-container: '#bab4da'\n  tertiary: '#ffffff'\n  on-tertiary: '#003546'\n  tertiary-container: '#bee9ff'\n  on-tertiary-container: '#3f6a7d'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#96f3e1'\n  primary-fixed-dim: '#7ad7c6'\n  on-primary-fixed: '#00201b'\n  on-primary-fixed-variant: '#005046'\n  secondary-fixed: '#e5deff'\n  secondary-fixed-dim: '#c8c2e9'\n  on-secondary-fixed: '#1b1735'\n  on-secondary-fixed-variant: '#474363'\n  tertiary-fixed: '#bee9ff'\n  tertiary-fixed-dim: '#a1cde3'\n  on-tertiary-fixed: '#001f2a'\n  on-tertiary-fixed-variant: '#1e4c5f'\n  background: '#131313'\n  on-background: '#e2e2e2'\n  surface-variant: '#353535'\ntypography:\n  display-lg:\n    fontFamily: Inter\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.1'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Inter\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Inter\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Inter\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-sm:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\n  metric-xl:\n    fontFamily: Inter\n    fontSize: 56px\n    fontWeight: '700'\n    lineHeight: '1'\n    letterSpacing: -0.05em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 4px\n  container-padding: 24px\n  stack-gap: 16px\n  grid-gutter: 12px\n---\n\n## Brand & Style\n\nThe design system is engineered for elite athletes and clinical sports scientists. It marries the precision of medical data with the premium, lifestyle-focused aesthetic of high-end consumer electronics. The personality is **Clinical yet Ethereal**—it avoids the aggressive, high-friction visuals of typical fitness apps in favor of a calm, \"flow-state\" environment.\n\nThe design style is a sophisticated **Dark-Mode Glassmorphism**. By utilizing an OLED black foundation, the interface allows pastel data visualizations to \"float\" and \"glow\" without visual noise. Every element feels like a high-precision instrument encased in frosted glass, emphasizing clarity, recovery, and long-term performance over short-term intensity.\n\n## Colors\n\nThe palette is anchored in an absolute **OLED Black (#000000)** to maximize contrast and battery efficiency on mobile devices. Data is categorized through a specific \"Soft Glow\" logic:\n\n*   **Readiness & Recovery:** Pastel Mint (#99F6E4) – The primary \"Go\" state.\n*   **Resilience & Defense:** Soft Lavender (#DDD6FE) – Used for immunity and structural health metrics.\n*   **Longevity & Baseline:** Airy Cyan (#BAE6FD) – Used for historical data and steady-state vitals.\n*   **Strain & Output:** Pale Lime (#ECFCCB) – A muted, high-visibility \"Volt\" for active performance.\n*   **Critical Alerts:** Soft Rose (#FECDD3) – A non-threatening but urgent indicator for over-exertion or injury risk.\n\nBackgrounds are never solid grey; they are either pure black or translucent layers with subtle backdrop blurs.\n\n## Typography\n\nThis design system utilizes **Inter** across all roles to maintain a sleek, utilitarian, and highly legible aesthetic (as a widely available and highly optimized alternative to SF Pro). \n\n**Display and Metrics:** For large numerical data (Heart Rate, VO2 Max, Strain Scores), use the `metric-xl` style with tight letter spacing. This emphasizes the \"data-first\" nature of the product.\n**Headings:** Use Semi-Bold weights with slight negative letter spacing to mimic premium editorial layouts.\n**Body:** Maintain a generous line height (1.6) to ensure medical descriptions and recovery protocols remain readable during movement.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fluid \"App-Canvas\" model**. Content is housed within nested containers that emphasize vertical flow.\n\n*   **Mobile:** 4-column grid with 24px side margins. Elements use \"Stacking\" logic where cards are separated by a 16px gap.\n*   **Desktop/Tablet:** 12-column grid. Detailed data views use a \"Dashboard\" layout where primary vitals are pinned to the left or top, and secondary analytics expand into a modular masonry grid.\n*   **Rhythm:** All spacing is based on a 4px baseline grid to ensure mathematical alignment of frosted glass borders.\n\n## Elevation & Depth\n\nDepth is achieved through **Backdrop Refraction** rather than traditional drop shadows.\n\n1.  **Base Layer:** Pure #000000.\n2.  **Mantle Layer:** Subtle mesh gradients (using the brand palette at 5% opacity) that shift slowly in the background to suggest \"life.\"\n3.  **Glass Layer (Surface):** A background blur (20px to 40px) with a semi-transparent white fill (`rgba(255, 255, 255, 0.04)`).\n4.  **The \"Strobe\" Edge:** Every glass container must have an ultra-thin 0.5px or 1px border (`rgba(255, 255, 255, 0.12)`). This catches the eye and defines the shape against the black void.\n5.  **Interactive State:** On tap or hover, the border opacity increases, and a subtle inner glow of the primary pastel color is applied.\n\n## Shapes\n\nThe shape language is **Ultra-Soft and Organic**. \n- **Standard Cards:** Use a 24px radius (`rounded-xl` in this system) to create a friendly, \"hand-held\" feel.\n- **Buttons and Chips:** Use a 16px radius.\n- **Data Points:** Use perfect circles or \"pill\" shapes for progress bars.\n\nAvoid all sharp corners. The goal is to make the interface feel like a single, continuous piece of molded glass and liquid light.\n\n## Components\n\n**Buttons:** \nPrimary buttons use a \"Glow-Fill\" style—a solid pastel background with black text. Secondary buttons are \"Glass-Ghost\" style—frosted backgrounds with white text and a 0.5px border.\n\n**Cards & Modules:** \nEvery card must utilize `backdrop-filter: blur()`. Labels inside cards should use the `label-sm` style in a muted 60% opacity white, while the data itself is rendered in the full-saturation pastel accent color.\n\n**Input Fields:** \nMinimalist underlines or subtle glass troughs. The focus state is indicated by a soft outer glow in the Primary Mint color, rather than a thick border change.\n\n**Biological Progress Rings:** \nUse thick, rounded stroke ends. Background tracks are 10% opacity of the accent color. The active track should have a \"bloom\" effect (a soft shadow of the same color) to appear as if it is emitting light.\n\n**Charts:** \nLine charts should use \"Bézier\" smoothing. Area charts use a vertical gradient from the pastel accent (top) to transparent (bottom). No grid lines are visible; use only a single baseline.",
+        "colorVariant": "FIDELITY",
+        "overridePrimaryColor": "#99f6e4",
+        "overrideSecondaryColor": "#ddd6fe",
+        "overrideTertiaryColor": "#bae6fd",
+        "overrideNeutralColor": "#000000",
+        "spacingScale": 2,
+        "typography": {
+          "display-lg": {
+            "fontFamily": "Inter",
+            "fontSize": "48px",
+            "fontWeight": "600",
+            "lineHeight": "1.1",
+            "letterSpacing": "-0.04em"
+          },
+          "body-lg": {
+            "fontFamily": "Inter",
+            "fontSize": "18px",
+            "fontWeight": "400",
+            "lineHeight": "1.6"
+          },
+          "headline-lg-mobile": {
+            "fontFamily": "Inter",
+            "fontSize": "28px",
+            "fontWeight": "600",
+            "lineHeight": "1.2"
+          },
+          "headline-lg": {
+            "fontFamily": "Inter",
+            "fontSize": "32px",
+            "fontWeight": "600",
+            "lineHeight": "1.2",
+            "letterSpacing": "-0.02em"
+          },
+          "label-sm": {
+            "fontFamily": "Inter",
+            "fontSize": "12px",
+            "fontWeight": "500",
+            "lineHeight": "1.2",
+            "letterSpacing": "0.05em"
+          },
+          "body-md": {
+            "fontFamily": "Inter",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "1.6"
+          },
+          "metric-xl": {
+            "fontFamily": "Inter",
+            "fontSize": "56px",
+            "fontWeight": "700",
+            "lineHeight": "1",
+            "letterSpacing": "-0.05em"
+          },
+          "headline-md": {
+            "fontFamily": "Inter",
+            "fontSize": "24px",
+            "fontWeight": "500",
+            "lineHeight": "1.3"
+          }
+        },
+        "spacing": {
+          "unit": "4px",
+          "grid-gutter": "12px",
+          "stack-gap": "16px",
+          "container-padding": "24px"
+        },
+        "headlineFontFamily": "Inter",
+        "bodyFontFamily": "Inter",
+        "labelFontFamily": "Inter"
+      }
+    },
+    "version": "1"
+  }
+}

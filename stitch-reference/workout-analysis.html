@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Workout Analysis - Elite Health AI</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#7ad7c6",
+                    "surface-container": "#1f1f1f",
+                    "on-background": "#e2e2e2",
+                    "surface-container-highest": "#353535",
+                    "on-tertiary-container": "#3f6a7d",
+                    "error": "#ffb4ab",
+                    "surface-container-low": "#1b1b1b",
+                    "on-primary": "#003730",
+                    "outline-variant": "#3e4946",
+                    "on-tertiary-fixed": "#001f2a",
+                    "on-error": "#690005",
+                    "surface-dim": "#131313",
+                    "secondary-container": "#494566",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface": "#131313",
+                    "on-primary-container": "#007164",
+                    "outline": "#879390",
+                    "on-secondary-container": "#bab4da",
+                    "surface-bright": "#393939",
+                    "background": "#131313",
+                    "tertiary-fixed": "#bee9ff",
+                    "tertiary": "#ffffff",
+                    "on-surface-variant": "#bdc9c5",
+                    "on-secondary-fixed-variant": "#474363",
+                    "on-error-container": "#ffdad6",
+                    "secondary": "#c8c2e9",
+                    "surface-variant": "#353535",
+                    "primary-fixed-dim": "#7ad7c6",
+                    "on-primary-fixed-variant": "#005046",
+                    "secondary-fixed-dim": "#c8c2e9",
+                    "primary-fixed": "#96f3e1",
+                    "tertiary-container": "#bee9ff",
+                    "inverse-primary": "#006b5e",
+                    "on-tertiary-fixed-variant": "#1e4c5f",
+                    "primary-container": "#96f3e1",
+                    "on-secondary": "#302c4b",
+                    "on-primary-fixed": "#00201b",
+                    "inverse-on-surface": "#303030",
+                    "surface-container-high": "#2a2a2a",
+                    "secondary-fixed": "#e5deff",
+                    "on-tertiary": "#003546",
+                    "primary": "#ffffff",
+                    "error-container": "#93000a",
+                    "tertiary-fixed-dim": "#a1cde3",
+                    "inverse-surface": "#e2e2e2",
+                    "on-surface": "#e2e2e2",
+                    "on-secondary-fixed": "#1b1735"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-gap": "16px",
+                    "container-padding": "24px",
+                    "unit": "4px",
+                    "grid-gutter": "12px",
+                    "margin-mobile": "24px",
+                    "stack-xs": "4px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "metric-xl": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "metric-xl": ["56px", {"lineHeight": "1", "letterSpacing": "-0.05em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["10px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600", "textTransform": "uppercase"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        /* Glassmorphism utilities */
+        .glass-card {
+            background-color: #121214;
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Mantle animation */
+        @keyframes subtle-shift {
+            0% { transform: translate(0, 0) scale(1); opacity: 0.03; }
+            50% { transform: translate(-20px, 20px) scale(1.1); opacity: 0.06; }
+            100% { transform: translate(0, 0) scale(1); opacity: 0.03; }
+        }
+        .aura-element {
+            animation: subtle-shift 15s infinite ease-in-out alternate;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-black text-on-background min-h-screen font-body-md antialiased overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Mantle Layer (Aura) -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden flex justify-center items-center">
+<div class="absolute w-[80vw] h-[80vw] max-w-[600px] max-h-[600px] bg-primary-fixed rounded-full blur-[120px] aura-element" style="animation-delay: 0s; top: 10%; left: -10%;"></div>
+<div class="absolute w-[60vw] h-[60vw] max-w-[400px] max-h-[400px] bg-secondary-fixed rounded-full blur-[100px] aura-element" style="animation-delay: -5s; bottom: 20%; right: -10%;"></div>
+</div>
+<!-- TopAppBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-[#121214]/60 backdrop-blur-xl border-b border-white/5 flex items-center justify-between px-margin-mobile h-16 max-w-7xl mx-auto left-0 right-0">
+<!-- Leading Avatar -->
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden border border-white/10 flex-shrink-0">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A close up, high-quality portrait photograph of a fit individual with a focused expression, representing an elite athlete. The lighting is studio-quality, slightly moody with high contrast to fit a dark-mode aesthetic. The background is completely black, allowing the subject to stand out." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcY7SLNNZwQq9ZSB4i3FhuogoGfzWGD6-KyBVSMh2xVUIJK0dZMKFask7hBeVOG-8oXLW32AyK3eNufpI4PP2V-QQa8ynS_jmfBTYeHhHbSWC46H7DCec4JZUmJC3SD-VQRgB5arlpvbTQGqVosGfjDj58IzEafQGMbOASUfoOQke8kZNUiaPACWIfyeoXzgePrG-JL4PW9zIJOxC1hCDkgXTbj0Q9AEM5pK0RpSDDF-hTG0kVHISucNwNF5is4uCIgHmkxunwn9wM"/>
+</div>
+<!-- Headline -->
+<span class="font-headline-lg-mobile text-headline-lg-mobile tracking-tighter text-on-surface truncate px-4">Elite Health AI</span>
+<!-- Trailing Icon -->
+<span class="material-symbols-outlined text-primary-fixed hover:text-primary-fixed-dim transition-colors active:scale-95 duration-200 cursor-pointer flex-shrink-0" style="font-variation-settings: 'FILL' 0;">calendar_today</span>
+</nav>
+<!-- Main Content Canvas -->
+<main class="relative z-10 pt-24 pb-32 px-container-padding max-w-3xl mx-auto flex flex-col gap-stack-gap">
+<!-- Header Section -->
+<header class="flex flex-col gap-1 mb-2">
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tighter uppercase">EVENING RUN</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">MAY 21 • 5:45 PM</p>
+</header>
+<!-- Primary Metrics Bento Grid -->
+<div class="grid grid-cols-2 gap-grid-gutter">
+<!-- Strain Card (Hero) -->
+<div class="col-span-2 glass-card rounded-xl p-6 relative overflow-hidden flex flex-col items-center justify-center min-h-[140px] group transition-all duration-500 hover:border-primary-fixed/50 hover:bg-[#121214]/80">
+<div class="absolute inset-0 bg-gradient-to-b from-primary-fixed/10 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-1 z-10">STRAIN</span>
+<span class="font-metric-xl text-metric-xl text-primary-fixed drop-shadow-[0_0_15px_rgba(150,243,225,0.4)] z-10 transition-transform duration-300 group-hover:scale-105">9.2</span>
+</div>
+<!-- Duration Card -->
+<div class="glass-card rounded-xl p-5 flex flex-col items-start relative overflow-hidden hover:bg-[#121214]/80 transition-colors">
+<span class="material-symbols-outlined text-primary-fixed mb-3 text-[28px]" style="font-variation-settings: 'FILL' 1;">timer</span>
+<div class="flex items-baseline gap-1 mt-auto">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">45</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">MIN</span>
+</div>
+</div>
+<!-- Kcal Card -->
+<div class="glass-card rounded-xl p-5 flex flex-col items-start relative overflow-hidden hover:bg-[#121214]/80 transition-colors">
+<span class="material-symbols-outlined text-error mb-3 text-[28px] drop-shadow-[0_0_8px_rgba(255,180,171,0.5)]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<div class="flex items-baseline gap-1 mt-auto">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">420</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">KCAL</span>
+</div>
+</div>
+</div>
+<!-- Heart Rate Zones -->
+<section class="glass-card rounded-xl p-5 flex flex-col gap-4">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Heart Rate Zones</h3>
+<!-- Stacked Bar representation -->
+<div class="w-full h-8 flex gap-[2px] rounded-full overflow-hidden p-1 bg-black/50 border border-white/5">
+<div class="h-full bg-surface-variant rounded-l-full" style="width: 10%;" title="Z1: 10%"></div>
+<div class="h-full bg-secondary-container" style="width: 20%;" title="Z2: 20%"></div>
+<div class="h-full bg-on-tertiary-container" style="width: 35%;" title="Z3: 35%"></div>
+<div class="h-full bg-inverse-primary" style="width: 25%;" title="Z4: 25%"></div>
+<div class="h-full bg-primary-fixed rounded-r-full shadow-[0_0_12px_rgba(150,243,225,0.8)] relative z-10" style="width: 10%;" title="Z5: 10%"></div>
+</div>
+<!-- Legend -->
+<div class="flex justify-between px-1">
+<div class="flex flex-col items-center">
+<span class="font-label-sm text-[10px] text-on-surface-variant opacity-60">Z1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10%</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-sm text-[10px] text-on-surface-variant opacity-60">Z2</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">20%</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-sm text-[10px] text-on-surface-variant opacity-60">Z3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">35%</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-sm text-[10px] text-on-surface-variant opacity-60">Z4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">25%</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-sm text-[10px] text-primary-fixed">Z5</span>
+<span class="font-label-sm text-label-sm text-primary-fixed drop-shadow-[0_0_5px_rgba(150,243,225,0.5)]">10%</span>
+</div>
+</div>
+</section>
+<!-- Running Dynamics Grid -->
+<section class="flex flex-col gap-3 mt-2">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest px-1">Running Dynamics</h3>
+<div class="grid grid-cols-2 gap-grid-gutter">
+<!-- Power -->
+<div class="glass-card rounded-xl p-4 flex flex-col justify-between h-24 hover:bg-[#121214]/80 transition-colors cursor-default">
+<span class="font-label-sm text-label-sm text-on-surface-variant">POWER</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface">280</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">W</span>
+</div>
+</div>
+<!-- Cadence -->
+<div class="glass-card rounded-xl p-4 flex flex-col justify-between h-24 hover:bg-[#121214]/80 transition-colors cursor-default">
+<span class="font-label-sm text-label-sm text-on-surface-variant">CADENCE</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface">172</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">SPM</span>
+</div>
+</div>
+<!-- GCT -->
+<div class="glass-card rounded-xl p-4 flex flex-col justify-between h-24 hover:bg-[#121214]/80 transition-colors cursor-default">
+<span class="font-label-sm text-label-sm text-on-surface-variant">GCT</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface">240</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">MS</span>
+</div>
+</div>
+<!-- Oscillation -->
+<div class="glass-card rounded-xl p-4 flex flex-col justify-between h-24 hover:bg-[#121214]/80 transition-colors cursor-default">
+<span class="font-label-sm text-label-sm text-on-surface-variant">OSCILLATION</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface">8.2</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">CM</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Pace / Elevation Chart Mockup -->
+<section class="glass-card rounded-xl p-5 h-56 flex flex-col relative overflow-hidden group">
+<div class="flex justify-between items-center relative z-20 mb-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">PACE &amp; ELEVATION</span>
+<span class="material-symbols-outlined text-on-surface-variant text-sm">open_in_full</span>
+</div>
+<!-- Grid Line -->
+<div class="absolute bottom-1/3 left-0 w-full border-b border-white/5 z-10 border-dashed"></div>
+<!-- CSS/SVG Chart Area -->
+<div class="absolute bottom-0 left-0 w-full h-[70%] z-0">
+<!-- Elevation Area -->
+<div class="absolute bottom-0 w-full h-full bg-gradient-to-t from-surface-variant/40 to-transparent opacity-50"></div>
+<!-- Pace Line (Simulated) -->
+<svg class="absolute bottom-0 w-full h-full overflow-visible drop-shadow-[0_4px_12px_rgba(150,243,225,0.3)]" preserveaspectratio="none" viewbox="0 0 100 100">
+<defs>
+<lineargradient id="lineGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#96f3e1"></stop>
+<stop offset="50%" stop-color="#bee9ff"></stop>
+<stop offset="100%" stop-color="#96f3e1"></stop>
+</lineargradient>
+</defs>
+<!-- Smooth Bezier Line -->
+<path class="transition-all duration-1000 ease-in-out" d="M0,60 C15,65 25,40 40,45 C60,55 70,30 85,35 C95,38 100,50 100,50" fill="none" stroke="url(#lineGrad)" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Pulse dot at end -->
+<circle class="animate-pulse" cx="100" cy="50" fill="#96f3e1" r="3"></circle>
+</svg>
+</div>
+</section>
+<!-- Training Effect -->
+<section class="glass-card rounded-xl p-5 flex items-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-primary-fixed/5 to-secondary-fixed/5"></div>
+<div class="flex-1 flex flex-col items-center justify-center z-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-1">AEROBIC</span>
+<span class="font-headline-lg text-headline-lg text-primary-fixed drop-shadow-[0_0_8px_rgba(150,243,225,0.3)]">3.8</span>
+</div>
+<div class="w-[1px] h-12 bg-white/10 z-10 mx-4"></div>
+<div class="flex-1 flex flex-col items-center justify-center z-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant mb-1">ANAEROBIC</span>
+<span class="font-headline-lg text-headline-lg text-secondary-fixed drop-shadow-[0_0_8px_rgba(229,222,255,0.3)]">2.1</span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Shared Component) - Mobile Only -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center py-stack-md px-margin-mobile bg-[#121214]/90 backdrop-blur-2xl border-t border-white/5 shadow-[0_-10px_20px_rgba(0,0,0,0.4)] z-50 rounded-t-xl md:hidden">
+<!-- Home (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant gap-stack-xs hover:text-primary-fixed duration-300 active:scale-90 transition-transform group">
+<span class="material-symbols-outlined transition-colors group-hover:text-primary-fixed">home</span>
+<span class="font-label-caps text-label-caps">Home</span>
+</button>
+<!-- Health (Active - based on semantic context of workout analysis) -->
+<button class="flex flex-col items-center justify-center text-primary-fixed gap-stack-xs hover:text-primary-fixed duration-300 active:scale-90 transition-transform relative">
+<!-- Active indicator glow -->
+<div class="absolute -top-3 w-8 h-1 bg-primary-fixed rounded-b-full shadow-[0_2px_8px_rgba(150,243,225,0.8)]"></div>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">query_stats</span>
+<span class="font-label-caps text-label-caps">Health</span>
+</button>
+<!-- Coach (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant gap-stack-xs hover:text-primary-fixed duration-300 active:scale-90 transition-transform group">
+<span class="material-symbols-outlined transition-colors group-hover:text-primary-fixed">psychology</span>
+<span class="font-label-caps text-label-caps">Coach</span>
+</button>
+<!-- Profile (Inactive) -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant gap-stack-xs hover:text-primary-fixed duration-300 active:scale-90 transition-transform group">
+<span class="material-symbols-outlined transition-colors group-hover:text-primary-fixed">person</span>
+<span class="font-label-caps text-label-caps">Profile</span>
+</button>
+</nav>
+</body></html>

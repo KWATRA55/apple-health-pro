@@ -1,0 +1,13 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true
+  },
+  "exclude": [
+    "node_modules",
+    "**/__tests__/*",
+    "scratch.ts",
+    "src/components/home/bento-grid.tsx",
+    "src/components/home/daily-directive.tsx"
+  ]
+}

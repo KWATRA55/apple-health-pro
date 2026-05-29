@@ -1,0 +1,262 @@
+{
+    "app": "Elite Health AI",
+    "description": "Expo React Native fitness intelligence app with Stitch design system, procedural 3D spheres, Reanimated animations, and Gemini AI coaching.",
+    "designSystem": {
+        "tokens": {
+            "bg": "#000000 (OLED black)",
+            "surface": "#121214",
+            "border": "rgba(255,255,255,0.08)",
+            "glass": "rgba(255,255,255,0.04)",
+            "onSurface": "#FAFAFA",
+            "accentCyan": "#00E5FF",
+            "accentTeal": "#14B8A6",
+            "accentPurple": "#A855F7",
+            "error": "#FF453A",
+            "warning": "#FFD60A",
+            "success": "#30D158"
+        }
+    },
+    "pages": {
+        "home": {
+            "route": "/(tabs)/index.tsx",
+            "description": "Main dashboard with date navigation, 3D longevity sphere hero, daily directive, pillar cards, correlation insights, and activity timeline.",
+            "keyComponents": [
+                "LongevitySphere (procedural 3D orb with morph/breathe animations)",
+                "DailyDirective (coach recommendations from heuristic synthesis)",
+                "PillarCard ×3 (Readiness/Resilience/Longevity with scores and trend arrows)",
+                "SleepMiniCard (last night's sleep summary)",
+                "BodySystemsStatusBar (live vitals status bar)",
+                "HrvTrendSpark (7-day HRV sparkline)",
+                "CorrelationExplorer (top-3 correlation insights)",
+                "AIPromptBar (quick-coach input)",
+                "WeeklyPlannerCard (10-day timeline: 3 past + 7 future)",
+                "InterceptModal (real-time health warnings)",
+                "StreakTracker (recovery/training/HRV streaks)",
+                "TrainingWindowCard (optimal daily training window)"
+            ],
+            "metrics": [
+                "paceOfAging, biologicalAge, chronologicalAge",
+                "recoveryScore, strainScore, recoveryZone",
+                "RHR, HRV, HRV zScore, RHR zScore",
+                "sleepDuration, sleepDebt",
+                "cnsStressScore (risk: LOW/MODERATE/HIGH)",
+                "injuryRisk (risk score, confidence)",
+                "correlationInsights (top-3 factors affecting recovery)",
+                "weeklyPlan (recommended strain, workout type, bedtime, protocols)",
+                "streaks (recovery/training/HRV positive)",
+                "trainingWindow (optimal start, end, quality)",
+                "bodySystems (HRV status, HR status, SpO₂, temperature)"
+            ],
+            "modals": [
+                "BiometricsInfoModal (pillars/glossary tabs)",
+                "DailyDirectiveDetailModal",
+                "TrainingWindowDetailModal",
+                "StreakDetailModal",
+                "CorrelationInsightModal"
+            ]
+        },
+        "health": {
+            "route": "/(tabs)/health.tsx",
+            "description": "Health deep-dive with 4 views: default overview + 3 drilldown views (Readiness/Resilience/Longevity) matching Stitch reference designs.",
+            "views": {
+                "default": {
+                    "label": "Health Deep-Dive (Default)",
+                    "description": "Overview with biological age slider, vital stats grid, strain gauge, recovery trend, activities list.",
+                    "metrics": [
+                        "biologicalAge (slider vs chronological marker)",
+                        "paceOfAging",
+                        "HRV (current + trend sparkline)",
+                        "RHR (current + trend sparkline)",
+                        "SpO₂, respiratoryRate, skinTempDelta",
+                        "strainScore (0-21 gauge with label)",
+                        "recoveryScore, recoveryZone",
+                        "sleepDuration, sleepDebt",
+                        "runningDynamics (vertical oscillation, ground contact, power, cadence)",
+                        "recentActivities (workout type, duration, strain, calories)"
+                    ]
+                },
+                "readiness": {
+                    "label": "Readiness Drill-down",
+                    "description": "Teal morph sphere with breathe animation, RHR vs average delta, HRV area gradient, recovery history bars, sleep duration vs need, ANS balance spectrum.",
+                    "accent": "#14B8A6 (teal)",
+                    "features": [
+                        "Teal procedural sphere (#0F766E→#2DD4BF→#042F2E) with morph + breathe animations",
+                        "PRIME ZONE label with recovery score",
+                        "RHR module: current bpm + delta vs average (↑/↓ X bpm vs avg) + sparkline",
+                        "HRV module: current ms + area gradient fill + sparkline",
+                        "Recovery History: W/F/S teal bars with glow shadow on today",
+                        "Sleep Duration vs Need: horizontal layout (actual vs need), debt indicator, progress bar",
+                        "ANS Balance: gradient bar (error→white→tertiary), 5 scale markers, midpoint marker (white/50), indicator dot at ~80% parasympathetic, description panel"
+                    ],
+                    "metrics": [
+                        "recoveryScore, recoveryZone ('PRIME ZONE' / 'MODERATE' / 'DEPLETED')",
+                        "RHR (bpm), RHR delta vs 7-day avg",
+                        "HRV (ms)",
+                        "recoveryHistory (7-day bar chart W/F/S)",
+                        "sleepActual (duration, quality, debt hours)",
+                        "sleepNeed (target hours, % achieved)",
+                        "parasympathetic balance (% from recovery trend)",
+                        "ANS status (sympathetic/parasympathetic dominant, description)"
+                    ]
+                },
+                "resilience": {
+                    "label": "Resilience Drill-down",
+                    "description": "Purple organic orb sphere, immunity/cardiac stress cards, CNS load gradient gauge, 7-day resilience trend, body details (movement/environment/cardio).",
+                    "accent": "#A855F7 (purple)",
+                    "features": [
+                        "Purple procedural orb (#C084FC→#A855F7→#7E22CE) with morph + breathe animations",
+                        "72 SCORE with 'ROBUST' status and description text",
+                        "Immunity Risk card: LOW/MODERATE/HIGH with mini progress bar (25%)",
+                        "Cardiac Stress card: HR RECOVERY SPEED → bpm/min + ECG sparkline mockup",
+                        "CNS Load: gradient gauge bar (purple→red), score/100 display, RECOVERED/FATIGUED labels",
+                        "CNS sub-metrics: audio noise (dB), daylight deficit (min), HRV suppression (%)",
+                        "7-Day Resilience Trend: bars with glow-filter on today (purple shadow + full opacity), others at 35%",
+                        "Body Details: Movement (asymmetry/stability/speed), Environment (sunlight/standing/exercise), Cardio (VO2 Max/breathing)"
+                    ],
+                    "metrics": [
+                        "resilienceScore (0-100, proxy from recovery trend)",
+                        "resilienceStatus ('ROBUST' / 'STABLE' / 'DEPLETED')",
+                        "immunityRisk (LOW/MODERATE/HIGH + confidence)",
+                        "cardiacHRRecovery (bpm/min, HR recovery speed)",
+                        "cnsStressScore (risk, confidence, audioLoad, daylightDeficit, hrvSuppression)",
+                        "resilienceTrend (7-day bars, % heights)",
+                        "mobilityRecord (walkingAsymmetry, doubleSupport, walkingSpeed)",
+                        "environmentalRecord (timeInDaylight, standHours, exerciseMinutes)",
+                        "cardioMetabolicRecord (vo2Max, breathingDisturbances)"
+                    ]
+                },
+                "longevity": {
+                    "label": "Longevity Drill-down",
+                    "description": "LongevitySphere hero, bio vs chrono age slider, VO2 Max area chart, gait symmetry ring chart, stability index bars, AI protocol adherence checklist.",
+                    "accent": "#00E5FF (cyan)",
+                    "features": [
+                        "LongevitySphere component (0.82x pace, 'Rejuvenating' label)",
+                        "Bio vs Chrono Age slider: bio fill (cyan glow), chrono marker (white dot)",
+                        "VO2 Max Trend: area chart with gradient fill + sparkline + current value dot + 'Superior'/'Excellent' badge",
+                        "Gait Symmetry: ring chart (68px circle, colored arc, percentage centered)",
+                        "Stability Index: 'HIGH' label with 5-bar visualization (varied heights, glow on peak)",
+                        "AI Protocol Adherence: 3-item checklist (Zone 2 Cardio, NMN Stack, Hyperbaric Oxygen) with check circles + strikethrough"
+                    ],
+                    "metrics": [
+                        "paceOfAging (0.5-1.5x, status: Rejuvenating/Thriving/Maintaining/Accelerating/At Risk)",
+                        "biologicalAge (years)",
+                        "chronologicalAge (years)",
+                        "vo2Max (mL/kg/min, trend sparkline, fitness rating badge)",
+                        "walkingAsymmetry (%) → gait symmetry (100 - asymmetry)",
+                        "doubleSupport (%) → stability index",
+                        "walkingSpeed (m/s)",
+                        "protocolAdherence (3 AI-recommended habits, completion status)"
+                    ]
+                }
+            }
+        },
+        "coach": {
+            "route": "/(tabs)/coach.tsx",
+            "description": "AI Health Assistant with Gemini-powered chat, biometric context widget, quick suggestions, Kilo Insights, and RAG-powered knowledge retrieval.",
+            "features": [
+                "Chat with Gemini AI coach (streaming responses)",
+                "BiometricsContextWidget (recovery score, strain score, zone indicator)",
+                "Quick suggestion chips (Recovery, CNS, Running Form, Injury Risk, Sleep Debt, HRV Trend)",
+                "Kilo Insights panel after first AI response (Metabolic Efficiency sparkline, Recovery Forecast countdown)",
+                "Suggestive Analysis chips (Sleep Consistency, Overtraining Risk, etc.)",
+                "VisionCapture for meal/workout photo analysis",
+                "RAG knowledge base integration for contextual responses",
+                "Coach typing indicator, message bubbles with biometric context"
+            ],
+            "metrics": [
+                "recoveryScore, strainScore, recoveryZone (green/yellow/red)",
+                "HRV zScore, RHR zScore",
+                "coachMessages (chat history with AI)",
+                "metabolic efficiency trend",
+                "recovery forecast (hours until optimal)"
+            ]
+        },
+        "profile": {
+            "route": "/(tabs)/profile.tsx",
+            "description": "Athlete profile with identity panel, all-time records, 7-day strain/recovery chart, activity summary, and navigation to weekly/monthly reports + export tools.",
+            "features": [
+                "Athlete identity panel (avatar, name, specialty tag: ENDURANCE SPECIALIST)",
+                "Stats row (total workouts, active days / 90-day target)",
+                "All-time highs: MAX STRAIN + DEEP SLEEP RECORD",
+                "7-Day Strain/Recovery bar chart",
+                "Activity summary (workout breakdown by type)",
+                "Weekly Report / Monthly Report navigation buttons",
+                "Export Tools (CSV, JSON, health report)"
+            ],
+            "metrics": [
+                "totalWorkouts (all-time count)",
+                "activeDays (days with data in last 90d)",
+                "maxStrain (all-time high strain score)",
+                "deepSleepRecord (all-time max deep sleep)",
+                "strainRecoveryChart (7-day paired bars)",
+                "activitySummary (workout count by type)"
+            ]
+        },
+        "sleepDrilldown": {
+            "route": "/drilldown/sleep.tsx",
+            "description": "Detailed sleep architecture view for a selected date with 7-night history and recovery context.",
+            "metrics": [
+                "sleepArchitecture (totalDuration, remMins, deepMins, coreMins, sleepQuality)",
+                "sleepDebt (cumulative hours)",
+                "recoveryScore (for the date)",
+                "7-night sleep history (duration, REM, deep, core breakdown)"
+            ]
+        },
+        "weeklySummary": {
+            "route": "/drilldown/weekly-summary.tsx",
+            "description": "Week-level aggregation with recovery zone distribution, sleep phase trend, CNS/daylight chart, strain bar chart, and weekly insights.",
+            "metrics": [
+                "weekStats (avg/stDev recovery, avg strain, green/yellow/red zone count, avg sleep)",
+                "zoneDistribution (recovery zone counts: green/yellow/red)",
+                "sleepPhaseTrend (7-day stacked bars: REM/deep/core)",
+                "cnsDaylightChart (7-day paired bars: CNS stress + daylight)",
+                "strainBarChart (7-day bars with stats: avg, max, total)",
+                "hrvTrend (7-day sparkline)",
+                "rhrTrend (7-day sparkline)",
+                "weeklyInsight (AI-generated patterns, advice, warning)"
+            ]
+        },
+        "monthlySummary": {
+            "route": "/drilldown/monthly-summary.tsx",
+            "description": "Month-level aggregation with calendar heatmap, VO2 Max trend, bio age delta, training/recovery balance, habit adherence, and autonomic balance.",
+            "metrics": [
+                "monthStats (avgRecovery, avgStrain, totalWorkouts, avgSleep)",
+                "calendarHeatmap (28-31 day recovery score grid)",
+                "vo2MaxTrend (month VO2 values, linear regression trendline)",
+                "bioAgeDelta (last 4 weeks: biological age vs pace of aging bars)",
+                "trainingRecoveryBalance (7-day buckets: strain vs recovery paired bars)",
+                "habitAdherence (top 3 habits with completion % and mini bar)",
+                "autonomicBalance (HRV zScore gauge, sympathetic/parasympathetic indicator)"
+            ]
+        },
+        "editProfile": {
+            "route": "/drilldown/edit-profile.tsx",
+            "description": "Edit athlete profile: name, chronological age, specialty, body metrics, health goals, and preferences.",
+            "metrics": [
+                "name, chronologicalAge",
+                "specialty (endurance/strength/hybrid/etc.)",
+                "height, weight, biological sex",
+                "healthGoals (performance, longevity, body comp, sleep, stress)",
+                "preferences (notifications, units, data sources)"
+            ]
+        }
+    },
+    "algorithmEngine": {
+        "description": "Heuristic synthesis engine produces pillar scores and recommendations from raw biometric data.",
+        "modules": [
+            "recovery.ts — recoveryScore, recoveryZone, HRV ratio, RHR delta, strainScore, strainLevel",
+            "sleepDebt.ts — sleepDebt, sleepQuality, sleepArchitecture (REM/deep/core breakdown)",
+            "biologicalAge.ts — biologicalAge, paceOfAging, ageDelta",
+            "cnsStress.ts — cnsStressScore (risk, audioLoad, daylightDeficit, hrvSuppression)",
+            "illnessPredictor.ts — immunityRisk, illnessProbability",
+            "injuryPredictor.ts — injuryRisk, riskFactors, recommendations",
+            "runningForm.ts — runningDynamics (vertical oscillation, ground contact, power, cadence)",
+            "trendEngine.ts — 7d/14d/30d slopes, direction, volatility, acceleration, zScores",
+            "pearsonCorrelation.ts — correlationInsights (top factors affecting recovery)",
+            "weeklyPlanner.ts — 7-day training plan (strain targets, workout types, protocols)",
+            "streaks.ts — recoveryStreak, trainingStreak, hrvPositiveStreak",
+            "habitImpact.ts — habit adherence tracking and impact scoring",
+            "heuristicSynthesis.ts — composite readiness/resilience/longevity pillar scores"
+        ]
+    }
+}

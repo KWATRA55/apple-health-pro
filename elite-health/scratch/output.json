@@ -1,0 +1,4261 @@
+{
+  "snapshot_type": "runtime_state_dump",
+  "data_origin": "sqlite | zustand | healthkit_runtime | mixed",
+  "generated_from_runtime": true,
+  "fallback_sections": [
+    "2026-05-23 - LongevityHero"
+  ],
+  "dates_with_no_data": [
+    "2026-05-23"
+  ],
+  "app_info": {
+    "app_name": "Elite Health",
+    "snapshot_generated_at": "2026-05-22T23:57:33.210Z",
+    "timezone": "America/Toronto"
+  },
+  "dates": [
+    {
+      "label": "today",
+      "date": "2026-05-22",
+      "raw_payloads": {
+        "currentScores": {
+          "date": "2026-05-22",
+          "recoveryScore": 43,
+          "strainScore": 15.6,
+          "sleepDebtHours": 15.4,
+          "sleepNeedHours": 8.8,
+          "hrvZScore": -0.77,
+          "rhrZScore": -0.92,
+          "recoveryZone": "yellow",
+          "biologicalAge": 80,
+          "paceOfAging": 2.5,
+          "immunityRisk": "HIGH",
+          "bioAgeConfidence": 0.8,
+          "bioAgeInputsUsed": [
+            "HRV",
+            "RHR",
+            "SpO₂",
+            "Sleep quality"
+          ],
+          "bioAgeInputsMissing": [
+            "VO₂ Max"
+          ],
+          "bioAgePrimaryDriver": "SpO₂ ↑"
+        },
+        "currentVitals": {
+          "id": 1283,
+          "timestamp": "2026-05-22T06:30:00.000Z",
+          "hrv": 18.235658334168598,
+          "rhr": 60,
+          "spo2": 0.99,
+          "respiratory_rate": 12,
+          "skin_temp_delta": 35.48576736450195,
+          "respiratoryRate": 12,
+          "skinTempDelta": 35.48576736450195
+        },
+        "currentSleep": {
+          "id": 697,
+          "date": "2026-05-22",
+          "total_duration_mins": 311,
+          "rem_mins": 68,
+          "deep_mins": 59,
+          "core_mins": 177,
+          "awake_mins": 6,
+          "sleep_need_hours": 8,
+          "sleep_debt_hours": 0,
+          "totalDurationMins": 311,
+          "remMins": 68,
+          "deepMins": 59,
+          "coreMins": 177,
+          "awakeMins": 6,
+          "sleepNeedHours": 8,
+          "sleepDebtHours": 0
+        },
+        "currentActivities": [
+          {
+            "id": 1630,
+            "timestamp": "2026-05-22T20:06:01.668Z",
+            "active_calories": 836,
+            "workout_type": "Badminton",
+            "duration_mins": 117,
+            "hr_zones": "[35,29,23,18,12]",
+            "max_hr": 0,
+            "strain_score": 15.6,
+            "avg_hr": 0,
+            "activeCalories": 836,
+            "workoutType": "Badminton",
+            "durationMins": 117,
+            "hrZones": [
+              35,
+              29,
+              23,
+              18,
+              12
+            ],
+            "maxHR": 0,
+            "strainScore": 15.6,
+            "avgHR": 0
+          }
+        ],
+        "currentMobility": {
+          "id": 737,
+          "date": "2026-05-22",
+          "steps": 11476,
+          "walking_speed": 1.07,
+          "walking_step_length": 0.58,
+          "walking_asymmetry": 0.09,
+          "double_support": 0.292,
+          "stair_speed_up": 0.3000745177268982,
+          "stair_speed_down": 0.3273729085922241,
+          "flights_climbed": 4,
+          "walkingSpeed": 1.07,
+          "walkingStepLength": 0.58,
+          "walkingAsymmetry": 0.09,
+          "doubleSupport": 0.292,
+          "stairSpeedUp": 0.3000745177268982,
+          "stairSpeedDown": 0.3273729085922241,
+          "flightsClimbed": 4
+        },
+        "currentCardio": {
+          "id": 657,
+          "date": "2026-05-22",
+          "vo2_max": 0,
+          "walking_hr_avg": 101,
+          "resting_energy": 21.67100000000001,
+          "physical_effort": 2.799999952316284,
+          "breathing_disturbances": 0,
+          "vo2Max": 0,
+          "walkingHRavg": 101,
+          "restingEnergy": 21.67100000000001,
+          "physicalEffort": 2.799999952316284,
+          "breathingDisturbances": 0
+        },
+        "currentEnvironmental": {
+          "id": 713,
+          "date": "2026-05-22",
+          "time_in_daylight": 309,
+          "headphone_audio": 83.46403425515797,
+          "exercise_minutes": 100,
+          "stand_minutes": 215,
+          "stand_hours": 4,
+          "timeInDaylight": 309,
+          "headphoneAudio": 83.46403425515797,
+          "exerciseMinutes": 100,
+          "standMinutes": 215,
+          "standHours": 4
+        },
+        "synthesis": {
+          "readiness": {
+            "score": 72,
+            "label": "READINESS",
+            "zone": "attention",
+            "zoneLabel": "MODERATE",
+            "primaryMetric": "18 ms HRV  ·  60 bpm RHR",
+            "icon": "BODY",
+            "glowColor": "#F59E0B",
+            "detail": "Recovery in progress. Moderate output capacity.",
+            "dataCoverage": "sufficient"
+          },
+          "resilience": {
+            "score": 17,
+            "label": "RESILIENCE",
+            "zone": "critical",
+            "zoneLabel": "FRAGILE",
+            "primaryMetric": "Immune: HIGH  ·  Injury: LOW  ·  CNS: HIGH",
+            "icon": "SHIELD",
+            "glowColor": "#EF4444",
+            "detail": "Multiple defense systems compromised. 2 systems under surveillance. Avoid high-risk activity.",
+            "dataCoverage": "sufficient"
+          },
+          "longevity": {
+            "score": 35,
+            "label": "LONGEVITY",
+            "zone": "critical",
+            "zoneLabel": "ACCELERATING",
+            "primaryMetric": "Bio Age 80  ·  Pace 2.50x  ·  VO₂ Max --",
+            "icon": "SPHERE",
+            "glowColor": "#EF4444",
+            "detail": "Pace of aging Faster than chronological. Cardiovascular and gait metrics indicate accelerated senescence.",
+            "dataCoverage": "sufficient"
+          },
+          "directive": "Multiple biological markers — wrist temperature (+35.5°C), elevated breathing disturbances, and HRV suppression — indicate your body is fighting something. Do not train. Hydrate aggressively (3L+ water). Sleep by 8:30 PM. Monitor for symptom progression.",
+          "headline": "IMMUNE SYSTEM ALERT",
+          "subheadline": "Immune system under active stress",
+          "warningFlags": [
+            {
+              "type": "illness",
+              "severity": "high",
+              "title": "IMMUNE SYSTEM ALERT",
+              "message": "Multiple biological markers indicate elevated illness probability."
+            },
+            {
+              "type": "cns",
+              "severity": "high",
+              "title": "CNS OVERLOAD",
+              "message": "High CNS strain score (70/100). High autonomic stress and environmental deficits. Prioritize parasympathetic activation (rest, meditation)."
+            },
+            {
+              "type": "overtraining",
+              "severity": "moderate",
+              "title": "HIGH STRAIN LOAD",
+              "message": "Strain score of 15.6 detected. Recovery needed before next session."
+            }
+          ],
+          "targetStrain": 3.6,
+          "targetBedtime": "9:00 PM",
+          "recoveryTips": [
+            "Complete rest — zero training strain today",
+            "3+ liters of water with electrolytes",
+            "Sleep target: 9+ hours"
+          ],
+          "interceptTriggers": [
+            {
+              "type": "rest_mandate",
+              "title": "CNS RECOVERY MANDATE",
+              "message": "Your central nervous system is operating with depleted reserves. Training today will produce diminished returns and increased injury risk.",
+              "icon": "REST",
+              "actionLabel": "REST & RECHARGE",
+              "severity": "critical",
+              "pill": "readiness"
+            },
+            {
+              "type": "sleep_prescription",
+              "title": "SLEEP PRESCRIPTION",
+              "message": "Target bedtime: 9:00 PM. Aim for 8.5+ hours to restore autonomic balance and immune function.",
+              "icon": "MOON",
+              "actionLabel": "SET BEDTIME",
+              "severity": "warning",
+              "pill": "readiness"
+            }
+          ],
+          "cnsStressScore": {
+            "risk": "HIGH",
+            "confidence": 85,
+            "audioLoad": 83.46403425515797,
+            "daylightDeficit": 0,
+            "hrvSuppression": 5.203354088055377,
+            "explanation": "High CNS strain score (70/100). High autonomic stress and environmental deficits. Prioritize parasympathetic activation (rest, meditation)."
+          }
+        },
+        "interceptTriggers": [
+          {
+            "type": "rest_mandate",
+            "title": "CNS RECOVERY MANDATE",
+            "message": "Your central nervous system is operating with depleted reserves. Training today will produce diminished returns and increased injury risk.",
+            "icon": "REST",
+            "actionLabel": "REST & RECHARGE",
+            "severity": "critical",
+            "pill": "readiness"
+          },
+          {
+            "type": "sleep_prescription",
+            "title": "SLEEP PRESCRIPTION",
+            "message": "Target bedtime: 9:00 PM. Aim for 8.5+ hours to restore autonomic balance and immune function.",
+            "icon": "MOON",
+            "actionLabel": "SET BEDTIME",
+            "severity": "warning",
+            "pill": "readiness"
+          }
+        ]
+      },
+      "pages": {
+        "home": {
+          "visible": true,
+          "selected_date": "2026-05-22",
+          "screen_title": "ELITE HEALTH",
+          "tab": "home",
+          "header": {
+            "date_selector": {
+              "visible_label": "TODAY",
+              "is_today": true,
+              "can_go_next": false
+            },
+            "sync_state": {
+              "visible_text": "Updated 7:57:30 PM",
+              "is_syncing": false
+            }
+          },
+          "sections": [
+            {
+              "section_key": "longevity_hero",
+              "section_title": "Longevity Sphere",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Biological Age",
+                  "display_value": "80",
+                  "numeric_value": 80,
+                  "unit": "years",
+                  "value_kind": "derived",
+                  "source": {
+                    "kind": "store",
+                    "store_selector": "currentScores?.biologicalAge",
+                    "db_table": "daily_scores",
+                    "algorithm": "computeBiologicalAge"
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Pace of Aging",
+                  "display_value": "2.50",
+                  "numeric_value": 2.5,
+                  "unit": "x",
+                  "value_kind": "derived",
+                  "source": {
+                    "kind": "store",
+                    "store_selector": "currentScores?.paceOfAging",
+                    "db_table": "daily_scores",
+                    "algorithm": "computeBiologicalAge"
+                  },
+                  "notes": null
+                }
+              ],
+              "explanations": []
+            },
+            {
+              "section_key": "insight_priority_stack",
+              "section_title": "Why Today Looks Like This",
+              "state": "normal",
+              "values": [],
+              "explanations": []
+            },
+            {
+              "section_key": "daily_directive",
+              "section_title": "Today's Decision Stack",
+              "state": "normal",
+              "values": [],
+              "explanations": []
+            },
+            {
+              "section_key": "training_window",
+              "section_title": "Training Window",
+              "state": "normal",
+              "values": [],
+              "explanations": []
+            },
+            {
+              "section_key": "health_pillars",
+              "section_title": "Health Pillars",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Readiness Score",
+                  "display_value": "72",
+                  "numeric_value": 72,
+                  "unit": null,
+                  "value_kind": "derived",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Resilience Score",
+                  "display_value": "17",
+                  "numeric_value": 17,
+                  "unit": null,
+                  "value_kind": "derived",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Longevity Score",
+                  "display_value": "35",
+                  "numeric_value": 35,
+                  "unit": null,
+                  "value_kind": "derived",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ],
+              "explanations": []
+            },
+            {
+              "section_key": "body_systems_status",
+              "section_title": "Body Systems",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "HRV",
+                  "display_value": "18",
+                  "numeric_value": 18,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "RHR",
+                  "display_value": "60",
+                  "numeric_value": 60,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ],
+              "explanations": []
+            },
+            {
+              "section_key": "trends_and_recovery",
+              "section_title": "Trends & Recovery",
+              "state": "normal",
+              "values": []
+            },
+            {
+              "section_key": "sleep_summary",
+              "section_title": "Sleep",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Duration",
+                  "display_value": "311",
+                  "numeric_value": 311,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ]
+            },
+            {
+              "section_key": "todays_timeline",
+              "section_title": "Today's Timeline",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Activity 1",
+                  "display_value": "Badminton - 117m",
+                  "numeric_value": 117,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ],
+              "explanations": []
+            },
+            {
+              "section_key": "weekly_planner",
+              "section_title": "Weekly Planner",
+              "state": "normal",
+              "values": []
+            },
+            {
+              "section_key": "streaks",
+              "section_title": "Streaks",
+              "state": "normal",
+              "values": []
+            }
+          ]
+        },
+        "health": {
+          "visible": true,
+          "selected_date": "2026-05-22",
+          "screen_title": "Health",
+          "tab": "health",
+          "subtabs": {
+            "overview": [
+              {
+                "section_key": "biological_age",
+                "section_title": "Biological Age",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Biological Age",
+                    "display_value": "80",
+                    "numeric_value": 80,
+                    "unit": "years",
+                    "value_kind": "derived",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.biologicalAge",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Chronological Age",
+                    "display_value": "25",
+                    "numeric_value": 25,
+                    "unit": "y",
+                    "value_kind": "fallback",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "profileAge ?? 25",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "recovery_score",
+                "section_title": "Recovery Score",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Recovery Score",
+                    "display_value": "43",
+                    "numeric_value": 43,
+                    "unit": null,
+                    "value_kind": "derived",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.recoveryScore",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "sleep",
+                "section_title": "Sleep",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Duration",
+                    "display_value": "311",
+                    "numeric_value": 311,
+                    "unit": "m",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Debt",
+                    "display_value": "15.4",
+                    "numeric_value": 15.4,
+                    "unit": "h",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "body_systems",
+                "section_title": "Body Systems",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Cardio",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentVitals.rhr",
+                      "db_table": "vitals",
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Autonomic",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentVitals.hrv",
+                      "db_table": "vitals",
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "core_vitals",
+                "section_title": "Core Vitals",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "HRV",
+                    "display_value": "18",
+                    "numeric_value": 18,
+                    "unit": "ms",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "RHR",
+                    "display_value": "60",
+                    "numeric_value": 60,
+                    "unit": "bpm",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "SpO2",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "%",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Resp Rate",
+                    "display_value": "12",
+                    "numeric_value": 12,
+                    "unit": "br/m",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Skin Temp",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "°C",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "cardiac_strain",
+                "section_title": "Cardiac Strain",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Cardiac Strain",
+                    "display_value": "15.6",
+                    "numeric_value": 15.6,
+                    "unit": "/ 21.0",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.strainScore",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "running_dynamics",
+                "section_title": "Running Dynamics",
+                "state": "empty",
+                "values": []
+              },
+              {
+                "section_key": "trend_explorer",
+                "section_title": "Trend Explorer — All Metrics",
+                "state": "normal",
+                "values": []
+              }
+            ],
+            "readiness": [
+              {
+                "section_key": "recovery_hero",
+                "section_title": "Recovery Score Hero",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Recovery Score",
+                    "display_value": "--",
+                    "numeric_value": 43,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.recoveryScore",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Recovery Zone",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.recoveryZone",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "rhr_hrv_modules",
+                "section_title": "RHR & HRV Cards",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "RHR",
+                    "display_value": "--",
+                    "numeric_value": 60,
+                    "unit": "bpm",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeRHR(currentVitals?.rhr)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "HRV",
+                    "display_value": "--",
+                    "numeric_value": 18,
+                    "unit": "ms",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeHRV(currentVitals?.hrv)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "supporting_vitals",
+                "section_title": "Supporting Vitals",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "SpO2",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "%",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeSpO2(currentVitals?.spo2)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Resp Rate",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "br/m",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeRespiratoryRate(currentVitals?.respiratoryRate)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Skin Temp",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "°C",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeSkinTempDelta(currentVitals?.skinTempDelta)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "readiness_cns",
+                "section_title": "CNS Readiness",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "CNS Status",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "cnsStressScore.risk",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              }
+            ],
+            "resilience": [
+              {
+                "section_key": "defense_status_grid",
+                "section_title": "Defense Status",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Immune Risk",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.immunityRisk",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Injury Risk",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "injuryRisk.risk",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "cns_load_gauge",
+                "section_title": "CNS Load",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Audio Load",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "cnsStressScore.audioLoad",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Daylight Deficit",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "cnsStressScore.daylightDeficit",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "body_details",
+                "section_title": "Body Details",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Walking Asymmetry",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "mobilityRecord?.walkingAsymmetry",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "VO2 Max",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeVO2Max(cardioRecord?.vo2Max)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              }
+            ],
+            "longevity": [
+              {
+                "section_key": "biological_vs_chronological",
+                "section_title": "Biological vs Chronological",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Biological Age",
+                    "display_value": "--",
+                    "numeric_value": 80,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.biologicalAge",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Pace of Aging",
+                    "display_value": "--",
+                    "numeric_value": 2.5,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.paceOfAging",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "protocol_adherence",
+                "section_title": "AI Protocol Adherence",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Bedtime before 11 PM",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.sleepDebtHours",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "coach": {
+          "visible": true,
+          "selected_date": "2026-05-22",
+          "screen_title": "Coach",
+          "sections": [
+            {
+              "section_key": "chat_interface",
+              "state": "empty",
+              "values": []
+            },
+            {
+              "section_key": "biometrics_context_widget",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Recovery",
+                  "display_value": "--",
+                  "numeric_value": null,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": "latestScores?.recoveryScore",
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Strain",
+                  "display_value": "--",
+                  "numeric_value": null,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": "latestScores?.strainScore",
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ]
+            }
+          ]
+        },
+        "profile": {
+          "visible": true,
+          "selected_date": "2026-05-22",
+          "screen_title": "Profile",
+          "sections": [
+            {
+              "section_key": "athlete_identity",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Workout Count",
+                  "display_value": "--",
+                  "numeric_value": 32,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Active Days",
+                  "display_value": "--",
+                  "numeric_value": 31,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ]
+            },
+            {
+              "section_key": "personal_records",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Max Strain",
+                  "display_value": "--",
+                  "numeric_value": null,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": "activities.reduce(max, a => max(a.strainScore ?? 0), 0)",
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "tomorrow",
+      "date": "2026-05-23",
+      "raw_payloads": {
+        "currentScores": null,
+        "currentVitals": null,
+        "currentSleep": null,
+        "currentActivities": [],
+        "currentMobility": null,
+        "currentCardio": null,
+        "currentEnvironmental": null,
+        "synthesis": null,
+        "interceptTriggers": []
+      },
+      "pages": {
+        "home": {
+          "visible": true,
+          "selected_date": "2026-05-23",
+          "screen_title": "ELITE HEALTH",
+          "tab": "home",
+          "header": {
+            "date_selector": {
+              "visible_label": "MAY 23",
+              "is_today": false,
+              "can_go_next": true
+            },
+            "sync_state": {
+              "visible_text": "Updated 7:57:30 PM",
+              "is_syncing": false
+            }
+          },
+          "sections": [
+            {
+              "section_key": "longevity_hero",
+              "section_title": "Longevity Sphere",
+              "state": "fallback",
+              "values": [
+                {
+                  "label": "Biological Age",
+                  "display_value": "25",
+                  "numeric_value": 25,
+                  "unit": "years",
+                  "value_kind": "fallback",
+                  "source": {
+                    "kind": "store",
+                    "store_selector": "currentScores?.biologicalAge",
+                    "db_table": "daily_scores",
+                    "algorithm": "computeBiologicalAge"
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Pace of Aging",
+                  "display_value": "1.00",
+                  "numeric_value": 1,
+                  "unit": "x",
+                  "value_kind": "fallback",
+                  "source": {
+                    "kind": "store",
+                    "store_selector": "currentScores?.paceOfAging",
+                    "db_table": "daily_scores",
+                    "algorithm": "computeBiologicalAge"
+                  },
+                  "notes": null
+                }
+              ],
+              "explanations": [
+                {
+                  "visible_text": "Awaiting recent longevity inputs",
+                  "kind": "fallback"
+                }
+              ]
+            },
+            {
+              "section_key": "insight_priority_stack",
+              "section_title": "Why Today Looks Like This",
+              "state": "empty",
+              "values": [],
+              "explanations": [
+                {
+                  "visible_text": "No synthesis data — insights populate after HealthKit sync",
+                  "kind": "empty_state"
+                }
+              ]
+            },
+            {
+              "section_key": "daily_directive",
+              "section_title": "Today's Decision Stack",
+              "state": "empty",
+              "values": [],
+              "explanations": [
+                {
+                  "visible_text": "Awaiting Data",
+                  "kind": "empty_state"
+                }
+              ]
+            },
+            {
+              "section_key": "training_window",
+              "section_title": "Training Window",
+              "state": "empty",
+              "values": [],
+              "explanations": [
+                {
+                  "visible_text": "Training Window · Awaiting HealthKit sync",
+                  "kind": "empty_state"
+                }
+              ]
+            },
+            {
+              "section_key": "health_pillars",
+              "section_title": "Health Pillars",
+              "state": "empty",
+              "values": [],
+              "explanations": [
+                {
+                  "visible_text": "Awaiting data",
+                  "kind": "empty_state"
+                }
+              ]
+            },
+            {
+              "section_key": "body_systems_status",
+              "section_title": "Body Systems",
+              "state": "empty",
+              "values": [],
+              "explanations": [
+                {
+                  "visible_text": "Awaiting vitals data",
+                  "kind": "empty_state"
+                }
+              ]
+            },
+            {
+              "section_key": "trends_and_recovery",
+              "section_title": "Trends & Recovery",
+              "state": "empty",
+              "values": []
+            },
+            {
+              "section_key": "sleep_summary",
+              "section_title": "Sleep",
+              "state": "empty",
+              "values": []
+            },
+            {
+              "section_key": "todays_timeline",
+              "section_title": "MAY 23's Timeline",
+              "state": "empty",
+              "values": [],
+              "explanations": [
+                {
+                  "visible_text": "No activities logged · Sync HealthKit or log a workout",
+                  "kind": "empty_state"
+                }
+              ]
+            },
+            {
+              "section_key": "weekly_planner",
+              "section_title": "Weekly Planner",
+              "state": "normal",
+              "values": []
+            },
+            {
+              "section_key": "streaks",
+              "section_title": "Streaks",
+              "state": "normal",
+              "values": []
+            }
+          ]
+        },
+        "health": {
+          "visible": true,
+          "selected_date": "2026-05-23",
+          "screen_title": "Health",
+          "tab": "health",
+          "subtabs": {
+            "overview": [
+              {
+                "section_key": "biological_age",
+                "section_title": "Biological Age",
+                "state": "fallback",
+                "values": [
+                  {
+                    "label": "Biological Age",
+                    "display_value": "25",
+                    "numeric_value": 25,
+                    "unit": "years",
+                    "value_kind": "fallback",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.biologicalAge",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Chronological Age",
+                    "display_value": "25",
+                    "numeric_value": 25,
+                    "unit": "y",
+                    "value_kind": "fallback",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "profileAge ?? 25",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "recovery_score",
+                "section_title": "Recovery Score",
+                "state": "empty",
+                "values": [
+                  {
+                    "label": "Recovery Score",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.recoveryScore",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "sleep",
+                "section_title": "Sleep",
+                "state": "empty",
+                "values": []
+              },
+              {
+                "section_key": "body_systems",
+                "section_title": "Body Systems",
+                "state": "empty",
+                "values": []
+              },
+              {
+                "section_key": "core_vitals",
+                "section_title": "Core Vitals",
+                "state": "empty",
+                "values": [
+                  {
+                    "label": "HRV",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "ms",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "RHR",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "bpm",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "SpO2",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "%",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Resp Rate",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "br/m",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Skin Temp",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "°C",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "cardiac_strain",
+                "section_title": "Cardiac Strain",
+                "state": "empty",
+                "values": [
+                  {
+                    "label": "Cardiac Strain",
+                    "display_value": "--",
+                    "numeric_value": 0,
+                    "unit": "/ 21.0",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.strainScore",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "running_dynamics",
+                "section_title": "Running Dynamics",
+                "state": "empty",
+                "values": []
+              },
+              {
+                "section_key": "trend_explorer",
+                "section_title": "Trend Explorer — All Metrics",
+                "state": "normal",
+                "values": []
+              }
+            ],
+            "readiness": [
+              {
+                "section_key": "recovery_hero",
+                "section_title": "Recovery Score Hero",
+                "state": "empty",
+                "values": [
+                  {
+                    "label": "Recovery Score",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.recoveryScore",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Recovery Zone",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.recoveryZone",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "rhr_hrv_modules",
+                "section_title": "RHR & HRV Cards",
+                "state": "empty",
+                "values": [
+                  {
+                    "label": "RHR",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "bpm",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeRHR(currentVitals?.rhr)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "HRV",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "ms",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeHRV(currentVitals?.hrv)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "supporting_vitals",
+                "section_title": "Supporting Vitals",
+                "state": "empty",
+                "values": [
+                  {
+                    "label": "SpO2",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "%",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeSpO2(currentVitals?.spo2)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Resp Rate",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "br/m",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeRespiratoryRate(currentVitals?.respiratoryRate)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Skin Temp",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "°C",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeSkinTempDelta(currentVitals?.skinTempDelta)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "readiness_cns",
+                "section_title": "CNS Readiness",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "CNS Status",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "cnsStressScore.risk",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              }
+            ],
+            "resilience": [
+              {
+                "section_key": "defense_status_grid",
+                "section_title": "Defense Status",
+                "state": "empty",
+                "values": [
+                  {
+                    "label": "Immune Risk",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.immunityRisk",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Injury Risk",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "injuryRisk.risk",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "cns_load_gauge",
+                "section_title": "CNS Load",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Audio Load",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "cnsStressScore.audioLoad",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Daylight Deficit",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "cnsStressScore.daylightDeficit",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "body_details",
+                "section_title": "Body Details",
+                "state": "empty",
+                "values": [
+                  {
+                    "label": "Walking Asymmetry",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "mobilityRecord?.walkingAsymmetry",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "VO2 Max",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeVO2Max(cardioRecord?.vo2Max)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              }
+            ],
+            "longevity": [
+              {
+                "section_key": "biological_vs_chronological",
+                "section_title": "Biological vs Chronological",
+                "state": "fallback",
+                "values": [
+                  {
+                    "label": "Biological Age",
+                    "display_value": "--",
+                    "numeric_value": 25,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.biologicalAge",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Pace of Aging",
+                    "display_value": "--",
+                    "numeric_value": 1,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.paceOfAging",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "protocol_adherence",
+                "section_title": "AI Protocol Adherence",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Bedtime before 11 PM",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.sleepDebtHours",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "coach": {
+          "visible": true,
+          "selected_date": "2026-05-23",
+          "screen_title": "Coach",
+          "sections": [
+            {
+              "section_key": "chat_interface",
+              "state": "empty",
+              "values": []
+            },
+            {
+              "section_key": "biometrics_context_widget",
+              "state": "empty",
+              "values": [
+                {
+                  "label": "Recovery",
+                  "display_value": "--",
+                  "numeric_value": null,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": "latestScores?.recoveryScore",
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Strain",
+                  "display_value": "--",
+                  "numeric_value": null,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": "latestScores?.strainScore",
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ]
+            }
+          ]
+        },
+        "profile": {
+          "visible": true,
+          "selected_date": "2026-05-23",
+          "screen_title": "Profile",
+          "sections": [
+            {
+              "section_key": "athlete_identity",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Workout Count",
+                  "display_value": "--",
+                  "numeric_value": 32,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Active Days",
+                  "display_value": "--",
+                  "numeric_value": 31,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ]
+            },
+            {
+              "section_key": "personal_records",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Max Strain",
+                  "display_value": "--",
+                  "numeric_value": null,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": "activities.reduce(max, a => max(a.strainScore ?? 0), 0)",
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "yesterday",
+      "date": "2026-05-21",
+      "raw_payloads": {
+        "currentScores": {
+          "date": "2026-05-21",
+          "recoveryScore": 41,
+          "strainScore": 21,
+          "sleepDebtHours": 12.6,
+          "sleepNeedHours": 8.7,
+          "hrvZScore": -1.11,
+          "rhrZScore": -0.48,
+          "recoveryZone": "yellow",
+          "biologicalAge": 80,
+          "paceOfAging": 2.5,
+          "immunityRisk": "HIGH",
+          "bioAgeConfidence": 0.8,
+          "bioAgeInputsUsed": [
+            "HRV",
+            "RHR",
+            "SpO₂",
+            "Sleep quality"
+          ],
+          "bioAgeInputsMissing": [
+            "VO₂ Max"
+          ],
+          "bioAgePrimaryDriver": "SpO₂ ↑"
+        },
+        "currentVitals": {
+          "id": 1284,
+          "timestamp": "2026-05-21T06:30:00.000Z",
+          "hrv": 14.091835010516451,
+          "rhr": 61.99999999999999,
+          "spo2": 0.98,
+          "respiratory_rate": 12,
+          "skin_temp_delta": 35.468467712402344,
+          "respiratoryRate": 12,
+          "skinTempDelta": 35.468467712402344
+        },
+        "currentSleep": {
+          "id": 698,
+          "date": "2026-05-21",
+          "total_duration_mins": 447,
+          "rem_mins": 122,
+          "deep_mins": 37,
+          "core_mins": 270,
+          "awake_mins": 18,
+          "sleep_need_hours": 8,
+          "sleep_debt_hours": 0,
+          "totalDurationMins": 447,
+          "remMins": 122,
+          "deepMins": 37,
+          "coreMins": 270,
+          "awakeMins": 18,
+          "sleepNeedHours": 8,
+          "sleepDebtHours": 0
+        },
+        "currentActivities": [
+          {
+            "id": 1632,
+            "timestamp": "2026-05-21T23:17:56.640Z",
+            "active_calories": 374,
+            "workout_type": "Golf",
+            "duration_mins": 57,
+            "hr_zones": "[17,14,11,9,6]",
+            "max_hr": 0,
+            "strain_score": 13.9,
+            "avg_hr": 0,
+            "activeCalories": 374,
+            "workoutType": "Golf",
+            "durationMins": 57,
+            "hrZones": [
+              17,
+              14,
+              11,
+              9,
+              6
+            ],
+            "maxHR": 0,
+            "strainScore": 13.9,
+            "avgHR": 0
+          },
+          {
+            "id": 1531,
+            "timestamp": "2026-05-21T08:30:00.000Z",
+            "active_calories": 329,
+            "workout_type": "Running",
+            "duration_mins": 42,
+            "hr_zones": "[13,11,8,6,4]",
+            "max_hr": 173,
+            "strain_score": 13,
+            "avg_hr": 149,
+            "activeCalories": 329,
+            "workoutType": "Running",
+            "durationMins": 42,
+            "hrZones": [
+              13,
+              11,
+              8,
+              6,
+              4
+            ],
+            "maxHR": 173,
+            "strainScore": 13,
+            "avgHR": 149
+          },
+          {
+            "id": 1631,
+            "timestamp": "2026-05-21T00:15:32.572Z",
+            "active_calories": 238,
+            "workout_type": "Skating Sports",
+            "duration_mins": 25,
+            "hr_zones": "[8,6,5,4,3]",
+            "max_hr": 0,
+            "strain_score": 12,
+            "avg_hr": 0,
+            "activeCalories": 238,
+            "workoutType": "Skating Sports",
+            "durationMins": 25,
+            "hrZones": [
+              8,
+              6,
+              5,
+              4,
+              3
+            ],
+            "maxHR": 0,
+            "strainScore": 12,
+            "avgHR": 0
+          }
+        ],
+        "currentMobility": {
+          "id": 738,
+          "date": "2026-05-21",
+          "steps": 3572,
+          "walking_speed": 1.03,
+          "walking_step_length": 0.58,
+          "walking_asymmetry": 0,
+          "double_support": 0.29600000000000004,
+          "stair_speed_up": 0.2784516215324402,
+          "stair_speed_down": 0.26110830903053284,
+          "flights_climbed": 4,
+          "walkingSpeed": 1.03,
+          "walkingStepLength": 0.58,
+          "walkingAsymmetry": 0,
+          "doubleSupport": 0.29600000000000004,
+          "stairSpeedUp": 0.2784516215324402,
+          "stairSpeedDown": 0.26110830903053284,
+          "flightsClimbed": 4
+        },
+        "currentCardio": {
+          "id": 658,
+          "date": "2026-05-21",
+          "vo2_max": 0,
+          "walking_hr_avg": 116,
+          "resting_energy": 20.420999999999996,
+          "physical_effort": 2,
+          "breathing_disturbances": 0,
+          "vo2Max": 0,
+          "walkingHRavg": 116,
+          "restingEnergy": 20.420999999999996,
+          "physicalEffort": 2,
+          "breathingDisturbances": 0
+        },
+        "currentEnvironmental": {
+          "id": 714,
+          "date": "2026-05-21",
+          "time_in_daylight": 233,
+          "headphone_audio": 71.02581788398518,
+          "exercise_minutes": 94,
+          "stand_minutes": 199,
+          "stand_hours": 3,
+          "timeInDaylight": 233,
+          "headphoneAudio": 71.02581788398518,
+          "exerciseMinutes": 94,
+          "standMinutes": 199,
+          "standHours": 3
+        },
+        "synthesis": {
+          "readiness": {
+            "score": 72,
+            "label": "READINESS",
+            "zone": "attention",
+            "zoneLabel": "MODERATE",
+            "primaryMetric": "14 ms HRV  ·  62 bpm RHR",
+            "icon": "BODY",
+            "glowColor": "#F59E0B",
+            "detail": "Recovery in progress. Moderate output capacity.",
+            "dataCoverage": "sufficient"
+          },
+          "resilience": {
+            "score": 17,
+            "label": "RESILIENCE",
+            "zone": "critical",
+            "zoneLabel": "FRAGILE",
+            "primaryMetric": "Immune: HIGH  ·  Injury: LOW  ·  CNS: HIGH",
+            "icon": "SHIELD",
+            "glowColor": "#EF4444",
+            "detail": "Multiple defense systems compromised. 2 systems under surveillance. Avoid high-risk activity.",
+            "dataCoverage": "sufficient"
+          },
+          "longevity": {
+            "score": 35,
+            "label": "LONGEVITY",
+            "zone": "critical",
+            "zoneLabel": "ACCELERATING",
+            "primaryMetric": "Bio Age 80  ·  Pace 2.50x  ·  VO₂ Max --",
+            "icon": "SPHERE",
+            "glowColor": "#EF4444",
+            "detail": "Pace of aging Faster than chronological. Cardiovascular and gait metrics indicate accelerated senescence.",
+            "dataCoverage": "sufficient"
+          },
+          "directive": "Multiple biological markers — wrist temperature (+35.5°C), elevated breathing disturbances, and HRV suppression — indicate your body is fighting something. Do not train. Hydrate aggressively (3L+ water). Sleep by 8:30 PM. Monitor for symptom progression.",
+          "headline": "IMMUNE SYSTEM ALERT",
+          "subheadline": "Immune system under active stress",
+          "warningFlags": [
+            {
+              "type": "illness",
+              "severity": "high",
+              "title": "IMMUNE SYSTEM ALERT",
+              "message": "Multiple biological markers indicate elevated illness probability."
+            },
+            {
+              "type": "cns",
+              "severity": "high",
+              "title": "CNS OVERLOAD",
+              "message": "High CNS strain score (70/100). High autonomic stress and environmental deficits. Prioritize parasympathetic activation (rest, meditation)."
+            },
+            {
+              "type": "overtraining",
+              "severity": "moderate",
+              "title": "HIGH STRAIN LOAD",
+              "message": "Strain score of 21.0 detected. Recovery needed before next session."
+            }
+          ],
+          "targetStrain": 3.6,
+          "targetBedtime": "9:00 PM",
+          "recoveryTips": [
+            "Complete rest — zero training strain today",
+            "3+ liters of water with electrolytes",
+            "Sleep target: 9+ hours"
+          ],
+          "interceptTriggers": [
+            {
+              "type": "rest_mandate",
+              "title": "CNS RECOVERY MANDATE",
+              "message": "Your central nervous system is operating with depleted reserves. Training today will produce diminished returns and increased injury risk.",
+              "icon": "REST",
+              "actionLabel": "REST & RECHARGE",
+              "severity": "critical",
+              "pill": "readiness"
+            },
+            {
+              "type": "sleep_prescription",
+              "title": "SLEEP PRESCRIPTION",
+              "message": "Target bedtime: 9:00 PM. Aim for 8.5+ hours to restore autonomic balance and immune function.",
+              "icon": "MOON",
+              "actionLabel": "SET BEDTIME",
+              "severity": "warning",
+              "pill": "readiness"
+            }
+          ],
+          "cnsStressScore": {
+            "risk": "HIGH",
+            "confidence": 85,
+            "audioLoad": 83.46403425515797,
+            "daylightDeficit": 0,
+            "hrvSuppression": 5.203354088055377,
+            "explanation": "High CNS strain score (70/100). High autonomic stress and environmental deficits. Prioritize parasympathetic activation (rest, meditation)."
+          }
+        },
+        "interceptTriggers": [
+          {
+            "type": "rest_mandate",
+            "title": "CNS RECOVERY MANDATE",
+            "message": "Your central nervous system is operating with depleted reserves. Training today will produce diminished returns and increased injury risk.",
+            "icon": "REST",
+            "actionLabel": "REST & RECHARGE",
+            "severity": "critical",
+            "pill": "readiness"
+          },
+          {
+            "type": "sleep_prescription",
+            "title": "SLEEP PRESCRIPTION",
+            "message": "Target bedtime: 9:00 PM. Aim for 8.5+ hours to restore autonomic balance and immune function.",
+            "icon": "MOON",
+            "actionLabel": "SET BEDTIME",
+            "severity": "warning",
+            "pill": "readiness"
+          }
+        ]
+      },
+      "pages": {
+        "home": {
+          "visible": true,
+          "selected_date": "2026-05-21",
+          "screen_title": "ELITE HEALTH",
+          "tab": "home",
+          "header": {
+            "date_selector": {
+              "visible_label": "MAY 21",
+              "is_today": false,
+              "can_go_next": true
+            },
+            "sync_state": {
+              "visible_text": "Updated 7:57:30 PM",
+              "is_syncing": false
+            }
+          },
+          "sections": [
+            {
+              "section_key": "longevity_hero",
+              "section_title": "Longevity Sphere",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Biological Age",
+                  "display_value": "80",
+                  "numeric_value": 80,
+                  "unit": "years",
+                  "value_kind": "derived",
+                  "source": {
+                    "kind": "store",
+                    "store_selector": "currentScores?.biologicalAge",
+                    "db_table": "daily_scores",
+                    "algorithm": "computeBiologicalAge"
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Pace of Aging",
+                  "display_value": "2.50",
+                  "numeric_value": 2.5,
+                  "unit": "x",
+                  "value_kind": "derived",
+                  "source": {
+                    "kind": "store",
+                    "store_selector": "currentScores?.paceOfAging",
+                    "db_table": "daily_scores",
+                    "algorithm": "computeBiologicalAge"
+                  },
+                  "notes": null
+                }
+              ],
+              "explanations": []
+            },
+            {
+              "section_key": "insight_priority_stack",
+              "section_title": "Why Today Looks Like This",
+              "state": "normal",
+              "values": [],
+              "explanations": []
+            },
+            {
+              "section_key": "daily_directive",
+              "section_title": "Today's Decision Stack",
+              "state": "normal",
+              "values": [],
+              "explanations": []
+            },
+            {
+              "section_key": "training_window",
+              "section_title": "Training Window",
+              "state": "normal",
+              "values": [],
+              "explanations": []
+            },
+            {
+              "section_key": "health_pillars",
+              "section_title": "Health Pillars",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Readiness Score",
+                  "display_value": "72",
+                  "numeric_value": 72,
+                  "unit": null,
+                  "value_kind": "derived",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Resilience Score",
+                  "display_value": "17",
+                  "numeric_value": 17,
+                  "unit": null,
+                  "value_kind": "derived",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Longevity Score",
+                  "display_value": "35",
+                  "numeric_value": 35,
+                  "unit": null,
+                  "value_kind": "derived",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ],
+              "explanations": []
+            },
+            {
+              "section_key": "body_systems_status",
+              "section_title": "Body Systems",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "HRV",
+                  "display_value": "14",
+                  "numeric_value": 14,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "RHR",
+                  "display_value": "62",
+                  "numeric_value": 62,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ],
+              "explanations": []
+            },
+            {
+              "section_key": "trends_and_recovery",
+              "section_title": "Trends & Recovery",
+              "state": "normal",
+              "values": []
+            },
+            {
+              "section_key": "sleep_summary",
+              "section_title": "Sleep",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Duration",
+                  "display_value": "447",
+                  "numeric_value": 447,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ]
+            },
+            {
+              "section_key": "todays_timeline",
+              "section_title": "MAY 21's Timeline",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Activity 1",
+                  "display_value": "Golf - 57m",
+                  "numeric_value": 57,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Activity 2",
+                  "display_value": "Running - 42m",
+                  "numeric_value": 42,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Activity 3",
+                  "display_value": "Skating Sports - 25m",
+                  "numeric_value": 25,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ],
+              "explanations": []
+            },
+            {
+              "section_key": "weekly_planner",
+              "section_title": "Weekly Planner",
+              "state": "normal",
+              "values": []
+            },
+            {
+              "section_key": "streaks",
+              "section_title": "Streaks",
+              "state": "normal",
+              "values": []
+            }
+          ]
+        },
+        "health": {
+          "visible": true,
+          "selected_date": "2026-05-21",
+          "screen_title": "Health",
+          "tab": "health",
+          "subtabs": {
+            "overview": [
+              {
+                "section_key": "biological_age",
+                "section_title": "Biological Age",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Biological Age",
+                    "display_value": "80",
+                    "numeric_value": 80,
+                    "unit": "years",
+                    "value_kind": "derived",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.biologicalAge",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Chronological Age",
+                    "display_value": "25",
+                    "numeric_value": 25,
+                    "unit": "y",
+                    "value_kind": "fallback",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "profileAge ?? 25",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "recovery_score",
+                "section_title": "Recovery Score",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Recovery Score",
+                    "display_value": "41",
+                    "numeric_value": 41,
+                    "unit": null,
+                    "value_kind": "derived",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.recoveryScore",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "sleep",
+                "section_title": "Sleep",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Duration",
+                    "display_value": "447",
+                    "numeric_value": 447,
+                    "unit": "m",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Debt",
+                    "display_value": "12.6",
+                    "numeric_value": 12.6,
+                    "unit": "h",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "body_systems",
+                "section_title": "Body Systems",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Cardio",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentVitals.rhr",
+                      "db_table": "vitals",
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Autonomic",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentVitals.hrv",
+                      "db_table": "vitals",
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "core_vitals",
+                "section_title": "Core Vitals",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "HRV",
+                    "display_value": "14",
+                    "numeric_value": 14,
+                    "unit": "ms",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "RHR",
+                    "display_value": "62",
+                    "numeric_value": 62,
+                    "unit": "bpm",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "SpO2",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "%",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Resp Rate",
+                    "display_value": "12",
+                    "numeric_value": 12,
+                    "unit": "br/m",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Skin Temp",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "°C",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "cardiac_strain",
+                "section_title": "Cardiac Strain",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Cardiac Strain",
+                    "display_value": "21",
+                    "numeric_value": 21,
+                    "unit": "/ 21.0",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.strainScore",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "running_dynamics",
+                "section_title": "Running Dynamics",
+                "state": "empty",
+                "values": []
+              },
+              {
+                "section_key": "trend_explorer",
+                "section_title": "Trend Explorer — All Metrics",
+                "state": "normal",
+                "values": []
+              }
+            ],
+            "readiness": [
+              {
+                "section_key": "recovery_hero",
+                "section_title": "Recovery Score Hero",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Recovery Score",
+                    "display_value": "--",
+                    "numeric_value": 41,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.recoveryScore",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Recovery Zone",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.recoveryZone",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "rhr_hrv_modules",
+                "section_title": "RHR & HRV Cards",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "RHR",
+                    "display_value": "--",
+                    "numeric_value": 62,
+                    "unit": "bpm",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeRHR(currentVitals?.rhr)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "HRV",
+                    "display_value": "--",
+                    "numeric_value": 14,
+                    "unit": "ms",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeHRV(currentVitals?.hrv)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "supporting_vitals",
+                "section_title": "Supporting Vitals",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "SpO2",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "%",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeSpO2(currentVitals?.spo2)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Resp Rate",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "br/m",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeRespiratoryRate(currentVitals?.respiratoryRate)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Skin Temp",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "°C",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeSkinTempDelta(currentVitals?.skinTempDelta)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "readiness_cns",
+                "section_title": "CNS Readiness",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "CNS Status",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "cnsStressScore.risk",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              }
+            ],
+            "resilience": [
+              {
+                "section_key": "defense_status_grid",
+                "section_title": "Defense Status",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Immune Risk",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.immunityRisk",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Injury Risk",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "injuryRisk.risk",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "cns_load_gauge",
+                "section_title": "CNS Load",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Audio Load",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "cnsStressScore.audioLoad",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Daylight Deficit",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "cnsStressScore.daylightDeficit",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "body_details",
+                "section_title": "Body Details",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Walking Asymmetry",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "mobilityRecord?.walkingAsymmetry",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "VO2 Max",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeVO2Max(cardioRecord?.vo2Max)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              }
+            ],
+            "longevity": [
+              {
+                "section_key": "biological_vs_chronological",
+                "section_title": "Biological vs Chronological",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Biological Age",
+                    "display_value": "--",
+                    "numeric_value": 80,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.biologicalAge",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Pace of Aging",
+                    "display_value": "--",
+                    "numeric_value": 2.5,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.paceOfAging",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "protocol_adherence",
+                "section_title": "AI Protocol Adherence",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Bedtime before 11 PM",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.sleepDebtHours",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "coach": {
+          "visible": true,
+          "selected_date": "2026-05-21",
+          "screen_title": "Coach",
+          "sections": [
+            {
+              "section_key": "chat_interface",
+              "state": "empty",
+              "values": []
+            },
+            {
+              "section_key": "biometrics_context_widget",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Recovery",
+                  "display_value": "--",
+                  "numeric_value": null,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": "latestScores?.recoveryScore",
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Strain",
+                  "display_value": "--",
+                  "numeric_value": null,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": "latestScores?.strainScore",
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ]
+            }
+          ]
+        },
+        "profile": {
+          "visible": true,
+          "selected_date": "2026-05-21",
+          "screen_title": "Profile",
+          "sections": [
+            {
+              "section_key": "athlete_identity",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Workout Count",
+                  "display_value": "--",
+                  "numeric_value": 32,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Active Days",
+                  "display_value": "--",
+                  "numeric_value": 31,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ]
+            },
+            {
+              "section_key": "personal_records",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Max Strain",
+                  "display_value": "--",
+                  "numeric_value": null,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": "activities.reduce(max, a => max(a.strainScore ?? 0), 0)",
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "2_days_ago",
+      "date": "2026-05-20",
+      "raw_payloads": {
+        "currentScores": {
+          "id": 1616,
+          "date": "2026-05-20",
+          "recovery_score": 61,
+          "strain_score": 12.7,
+          "sleep_debt_hours": 12,
+          "sleep_need_hours": 8.8,
+          "hrv_z_score": 0.08,
+          "rhr_z_score": -0.77,
+          "recovery_zone": "yellow",
+          "biological_age": 18,
+          "pace_of_aging": 0,
+          "immunity_risk": "ELEVATED",
+          "bio_age_confidence": null,
+          "bio_age_inputs_used": null,
+          "bio_age_inputs_missing": null,
+          "bio_age_primary_driver": null,
+          "recoveryScore": 61,
+          "strainScore": 12.7,
+          "sleepDebtHours": 12,
+          "sleepNeedHours": 8.8,
+          "hrvZScore": 0.08,
+          "rhrZScore": -0.77,
+          "recoveryZone": "yellow",
+          "biologicalAge": 18,
+          "paceOfAging": 0,
+          "immunityRisk": "ELEVATED",
+          "bioAgeConfidence": 0,
+          "bioAgeInputsUsed": [],
+          "bioAgeInputsMissing": [],
+          "bioAgePrimaryDriver": "unknown"
+        },
+        "currentVitals": {
+          "id": 1225,
+          "timestamp": "2026-05-20T06:30:00.000Z",
+          "hrv": 33.87694946745158,
+          "rhr": 61,
+          "spo2": 0.97,
+          "respiratory_rate": 13,
+          "skin_temp_delta": 35.344627380371094,
+          "respiratoryRate": 13,
+          "skinTempDelta": 35.344627380371094
+        },
+        "currentSleep": {
+          "id": 639,
+          "date": "2026-05-20",
+          "total_duration_mins": 513,
+          "rem_mins": 113,
+          "deep_mins": 37,
+          "core_mins": 272,
+          "awake_mins": 13,
+          "sleep_need_hours": 8,
+          "sleep_debt_hours": 0,
+          "totalDurationMins": 513,
+          "remMins": 113,
+          "deepMins": 37,
+          "coreMins": 272,
+          "awakeMins": 13,
+          "sleepNeedHours": 8,
+          "sleepDebtHours": 0
+        },
+        "currentActivities": [
+          {
+            "id": 1532,
+            "timestamp": "2026-05-20T08:30:00.000Z",
+            "active_calories": 287,
+            "workout_type": "Cycling",
+            "duration_mins": 36,
+            "hr_zones": "[11,9,7,5,4]",
+            "max_hr": 180,
+            "strain_score": 12.7,
+            "avg_hr": 155,
+            "activeCalories": 287,
+            "workoutType": "Cycling",
+            "durationMins": 36,
+            "hrZones": [
+              11,
+              9,
+              7,
+              5,
+              4
+            ],
+            "maxHR": 180,
+            "strainScore": 12.7,
+            "avgHR": 155
+          }
+        ],
+        "currentMobility": {
+          "id": 656,
+          "date": "2026-05-20",
+          "steps": 4598,
+          "walking_speed": 1.01,
+          "walking_step_length": 0.59,
+          "walking_asymmetry": 0.07,
+          "double_support": 0.3,
+          "stair_speed_up": 0,
+          "stair_speed_down": 0,
+          "flights_climbed": 3,
+          "walkingSpeed": 1.01,
+          "walkingStepLength": 0.59,
+          "walkingAsymmetry": 0.07,
+          "doubleSupport": 0.3,
+          "stairSpeedUp": 0,
+          "stairSpeedDown": 0,
+          "flightsClimbed": 3
+        },
+        "currentCardio": {
+          "id": 576,
+          "date": "2026-05-20",
+          "vo2_max": 0,
+          "walking_hr_avg": 86,
+          "resting_energy": 18.729,
+          "physical_effort": 1.399999976158142,
+          "breathing_disturbances": 0,
+          "vo2Max": 0,
+          "walkingHRavg": 86,
+          "restingEnergy": 18.729,
+          "physicalEffort": 1.399999976158142,
+          "breathingDisturbances": 0
+        },
+        "currentEnvironmental": {
+          "id": 655,
+          "date": "2026-05-20",
+          "time_in_daylight": 82,
+          "headphone_audio": 0,
+          "exercise_minutes": 3,
+          "stand_minutes": 149,
+          "stand_hours": 2,
+          "timeInDaylight": 82,
+          "headphoneAudio": 0,
+          "exerciseMinutes": 3,
+          "standMinutes": 149,
+          "standHours": 2
+        },
+        "synthesis": {
+          "readiness": {
+            "score": 100,
+            "label": "READINESS",
+            "zone": "optimal",
+            "zoneLabel": "PRIMED",
+            "primaryMetric": "34 ms HRV  ·  61 bpm RHR",
+            "icon": "BODY",
+            "glowColor": "#14B8A6",
+            "detail": "Autonomic nervous system balanced. Full work capacity available.",
+            "dataCoverage": "sufficient"
+          },
+          "resilience": {
+            "score": 32,
+            "label": "RESILIENCE",
+            "zone": "critical",
+            "zoneLabel": "FRAGILE",
+            "primaryMetric": "Immune: ELEVATED  ·  Injury: LOW  ·  CNS: HIGH",
+            "icon": "SHIELD",
+            "glowColor": "#EF4444",
+            "detail": "Multiple defense systems compromised. 2 systems under surveillance. Avoid high-risk activity.",
+            "dataCoverage": "sufficient"
+          },
+          "longevity": {
+            "score": 90,
+            "label": "LONGEVITY",
+            "zone": "optimal",
+            "zoneLabel": "ROBUST",
+            "primaryMetric": "Bio Age 18  ·  Pace 0.00x  ·  VO₂ Max --",
+            "icon": "SPHERE",
+            "glowColor": "#00E5FF",
+            "detail": "Pace of aging is Slower than chronological. Your biomarkers read 7.0 years younger than your calendar.",
+            "dataCoverage": "sufficient"
+          },
+          "directive": "Your CNS is fried. High CNS strain score (70/100). High autonomic stress and environmental deficits. Prioritize parasympathetic activation (rest, meditation). Walk 10k steps max, avoid HIIT, sleep by 9 PM. No screens 1 hour before bed. Parasympathetic breathing: 4-7-8 protocol, 5 min, 3x today.",
+          "headline": "CNS OVERLOAD",
+          "subheadline": "Central nervous system depleted",
+          "warningFlags": [
+            {
+              "type": "cns",
+              "severity": "high",
+              "title": "CNS OVERLOAD",
+              "message": "High CNS strain score (70/100). High autonomic stress and environmental deficits. Prioritize parasympathetic activation (rest, meditation)."
+            },
+            {
+              "type": "illness",
+              "severity": "moderate",
+              "title": "IMMUNE VIGILANCE",
+              "message": "Early warning markers active. Prioritize rest and hydration."
+            }
+          ],
+          "targetStrain": 6.7,
+          "targetBedtime": "9:00 PM",
+          "recoveryTips": [
+            "Max 10k steps — no structured training",
+            "4-7-8 breathing: inhale 4s, hold 7s, exhale 8s",
+            "Bedtime 9:00 PM, no screens after 8:00 PM"
+          ],
+          "interceptTriggers": [
+            {
+              "type": "rest_mandate",
+              "title": "CNS RECOVERY MANDATE",
+              "message": "Your central nervous system is operating with depleted reserves. Training today will produce diminished returns and increased injury risk.",
+              "icon": "REST",
+              "actionLabel": "REST & RECHARGE",
+              "severity": "critical",
+              "pill": "readiness"
+            },
+            {
+              "type": "sleep_prescription",
+              "title": "SLEEP PRESCRIPTION",
+              "message": "Target bedtime: 9:00 PM. Aim for 8.5+ hours to restore autonomic balance and immune function.",
+              "icon": "MOON",
+              "actionLabel": "SET BEDTIME",
+              "severity": "warning",
+              "pill": "readiness"
+            }
+          ],
+          "cnsStressScore": {
+            "risk": "HIGH",
+            "confidence": 85,
+            "audioLoad": 83.46403425515797,
+            "daylightDeficit": 0,
+            "hrvSuppression": 5.203354088055377,
+            "explanation": "High CNS strain score (70/100). High autonomic stress and environmental deficits. Prioritize parasympathetic activation (rest, meditation)."
+          }
+        },
+        "interceptTriggers": [
+          {
+            "type": "rest_mandate",
+            "title": "CNS RECOVERY MANDATE",
+            "message": "Your central nervous system is operating with depleted reserves. Training today will produce diminished returns and increased injury risk.",
+            "icon": "REST",
+            "actionLabel": "REST & RECHARGE",
+            "severity": "critical",
+            "pill": "readiness"
+          },
+          {
+            "type": "sleep_prescription",
+            "title": "SLEEP PRESCRIPTION",
+            "message": "Target bedtime: 9:00 PM. Aim for 8.5+ hours to restore autonomic balance and immune function.",
+            "icon": "MOON",
+            "actionLabel": "SET BEDTIME",
+            "severity": "warning",
+            "pill": "readiness"
+          }
+        ]
+      },
+      "pages": {
+        "home": {
+          "visible": true,
+          "selected_date": "2026-05-20",
+          "screen_title": "ELITE HEALTH",
+          "tab": "home",
+          "header": {
+            "date_selector": {
+              "visible_label": "MAY 20",
+              "is_today": false,
+              "can_go_next": true
+            },
+            "sync_state": {
+              "visible_text": "Updated 7:57:30 PM",
+              "is_syncing": false
+            }
+          },
+          "sections": [
+            {
+              "section_key": "longevity_hero",
+              "section_title": "Longevity Sphere",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Biological Age",
+                  "display_value": "18",
+                  "numeric_value": 18,
+                  "unit": "years",
+                  "value_kind": "derived",
+                  "source": {
+                    "kind": "store",
+                    "store_selector": "currentScores?.biologicalAge",
+                    "db_table": "daily_scores",
+                    "algorithm": "computeBiologicalAge"
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Pace of Aging",
+                  "display_value": "1.00",
+                  "numeric_value": 1,
+                  "unit": "x",
+                  "value_kind": "derived",
+                  "source": {
+                    "kind": "store",
+                    "store_selector": "currentScores?.paceOfAging",
+                    "db_table": "daily_scores",
+                    "algorithm": "computeBiologicalAge"
+                  },
+                  "notes": null
+                }
+              ],
+              "explanations": []
+            },
+            {
+              "section_key": "insight_priority_stack",
+              "section_title": "Why Today Looks Like This",
+              "state": "normal",
+              "values": [],
+              "explanations": []
+            },
+            {
+              "section_key": "daily_directive",
+              "section_title": "Today's Decision Stack",
+              "state": "normal",
+              "values": [],
+              "explanations": []
+            },
+            {
+              "section_key": "training_window",
+              "section_title": "Training Window",
+              "state": "normal",
+              "values": [],
+              "explanations": []
+            },
+            {
+              "section_key": "health_pillars",
+              "section_title": "Health Pillars",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Readiness Score",
+                  "display_value": "100",
+                  "numeric_value": 100,
+                  "unit": null,
+                  "value_kind": "derived",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Resilience Score",
+                  "display_value": "32",
+                  "numeric_value": 32,
+                  "unit": null,
+                  "value_kind": "derived",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Longevity Score",
+                  "display_value": "90",
+                  "numeric_value": 90,
+                  "unit": null,
+                  "value_kind": "derived",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ],
+              "explanations": []
+            },
+            {
+              "section_key": "body_systems_status",
+              "section_title": "Body Systems",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "HRV",
+                  "display_value": "34",
+                  "numeric_value": 34,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "RHR",
+                  "display_value": "61",
+                  "numeric_value": 61,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ],
+              "explanations": []
+            },
+            {
+              "section_key": "trends_and_recovery",
+              "section_title": "Trends & Recovery",
+              "state": "normal",
+              "values": []
+            },
+            {
+              "section_key": "sleep_summary",
+              "section_title": "Sleep",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Duration",
+                  "display_value": "513",
+                  "numeric_value": 513,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ]
+            },
+            {
+              "section_key": "todays_timeline",
+              "section_title": "MAY 20's Timeline",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Activity 1",
+                  "display_value": "Cycling - 36m",
+                  "numeric_value": 36,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ],
+              "explanations": []
+            },
+            {
+              "section_key": "weekly_planner",
+              "section_title": "Weekly Planner",
+              "state": "normal",
+              "values": []
+            },
+            {
+              "section_key": "streaks",
+              "section_title": "Streaks",
+              "state": "normal",
+              "values": []
+            }
+          ]
+        },
+        "health": {
+          "visible": true,
+          "selected_date": "2026-05-20",
+          "screen_title": "Health",
+          "tab": "health",
+          "subtabs": {
+            "overview": [
+              {
+                "section_key": "biological_age",
+                "section_title": "Biological Age",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Biological Age",
+                    "display_value": "18",
+                    "numeric_value": 18,
+                    "unit": "years",
+                    "value_kind": "derived",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.biologicalAge",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Chronological Age",
+                    "display_value": "25",
+                    "numeric_value": 25,
+                    "unit": "y",
+                    "value_kind": "fallback",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "profileAge ?? 25",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "recovery_score",
+                "section_title": "Recovery Score",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Recovery Score",
+                    "display_value": "61",
+                    "numeric_value": 61,
+                    "unit": null,
+                    "value_kind": "derived",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.recoveryScore",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "sleep",
+                "section_title": "Sleep",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Duration",
+                    "display_value": "513",
+                    "numeric_value": 513,
+                    "unit": "m",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Debt",
+                    "display_value": "12",
+                    "numeric_value": 12,
+                    "unit": "h",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "body_systems",
+                "section_title": "Body Systems",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Cardio",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentVitals.rhr",
+                      "db_table": "vitals",
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Autonomic",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentVitals.hrv",
+                      "db_table": "vitals",
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "core_vitals",
+                "section_title": "Core Vitals",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "HRV",
+                    "display_value": "34",
+                    "numeric_value": 34,
+                    "unit": "ms",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "RHR",
+                    "display_value": "61",
+                    "numeric_value": 61,
+                    "unit": "bpm",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "SpO2",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "%",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Resp Rate",
+                    "display_value": "13",
+                    "numeric_value": 13,
+                    "unit": "br/m",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Skin Temp",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "°C",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": null,
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "cardiac_strain",
+                "section_title": "Cardiac Strain",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Cardiac Strain",
+                    "display_value": "12.7",
+                    "numeric_value": 12.7,
+                    "unit": "/ 21.0",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.strainScore",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "running_dynamics",
+                "section_title": "Running Dynamics",
+                "state": "empty",
+                "values": []
+              },
+              {
+                "section_key": "trend_explorer",
+                "section_title": "Trend Explorer — All Metrics",
+                "state": "normal",
+                "values": []
+              }
+            ],
+            "readiness": [
+              {
+                "section_key": "recovery_hero",
+                "section_title": "Recovery Score Hero",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Recovery Score",
+                    "display_value": "--",
+                    "numeric_value": 61,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.recoveryScore",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Recovery Zone",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.recoveryZone",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "rhr_hrv_modules",
+                "section_title": "RHR & HRV Cards",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "RHR",
+                    "display_value": "--",
+                    "numeric_value": 61,
+                    "unit": "bpm",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeRHR(currentVitals?.rhr)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "HRV",
+                    "display_value": "--",
+                    "numeric_value": 34,
+                    "unit": "ms",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeHRV(currentVitals?.hrv)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "supporting_vitals",
+                "section_title": "Supporting Vitals",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "SpO2",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "%",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeSpO2(currentVitals?.spo2)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Resp Rate",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "br/m",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeRespiratoryRate(currentVitals?.respiratoryRate)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Skin Temp",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": "°C",
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeSkinTempDelta(currentVitals?.skinTempDelta)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "readiness_cns",
+                "section_title": "CNS Readiness",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "CNS Status",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "cnsStressScore.risk",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              }
+            ],
+            "resilience": [
+              {
+                "section_key": "defense_status_grid",
+                "section_title": "Defense Status",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Immune Risk",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.immunityRisk",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Injury Risk",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "injuryRisk.risk",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "cns_load_gauge",
+                "section_title": "CNS Load",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Audio Load",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "cnsStressScore.audioLoad",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Daylight Deficit",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "cnsStressScore.daylightDeficit",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "body_details",
+                "section_title": "Body Details",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Walking Asymmetry",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "mobilityRecord?.walkingAsymmetry",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "VO2 Max",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "safeVO2Max(cardioRecord?.vo2Max)",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              }
+            ],
+            "longevity": [
+              {
+                "section_key": "biological_vs_chronological",
+                "section_title": "Biological vs Chronological",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Biological Age",
+                    "display_value": "--",
+                    "numeric_value": 18,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.biologicalAge",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  },
+                  {
+                    "label": "Pace of Aging",
+                    "display_value": "--",
+                    "numeric_value": 1,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.paceOfAging",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              },
+              {
+                "section_key": "protocol_adherence",
+                "section_title": "AI Protocol Adherence",
+                "state": "normal",
+                "values": [
+                  {
+                    "label": "Bedtime before 11 PM",
+                    "display_value": "--",
+                    "numeric_value": null,
+                    "unit": null,
+                    "value_kind": "empty_state",
+                    "source": {
+                      "kind": "unknown",
+                      "store_selector": "currentScores?.sleepDebtHours",
+                      "db_table": null,
+                      "algorithm": null
+                    },
+                    "notes": null
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "coach": {
+          "visible": true,
+          "selected_date": "2026-05-20",
+          "screen_title": "Coach",
+          "sections": [
+            {
+              "section_key": "chat_interface",
+              "state": "empty",
+              "values": []
+            },
+            {
+              "section_key": "biometrics_context_widget",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Recovery",
+                  "display_value": "--",
+                  "numeric_value": null,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": "latestScores?.recoveryScore",
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Strain",
+                  "display_value": "--",
+                  "numeric_value": null,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": "latestScores?.strainScore",
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ]
+            }
+          ]
+        },
+        "profile": {
+          "visible": true,
+          "selected_date": "2026-05-20",
+          "screen_title": "Profile",
+          "sections": [
+            {
+              "section_key": "athlete_identity",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Workout Count",
+                  "display_value": "--",
+                  "numeric_value": 32,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                },
+                {
+                  "label": "Active Days",
+                  "display_value": "--",
+                  "numeric_value": 31,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": null,
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ]
+            },
+            {
+              "section_key": "personal_records",
+              "state": "normal",
+              "values": [
+                {
+                  "label": "Max Strain",
+                  "display_value": "--",
+                  "numeric_value": null,
+                  "unit": null,
+                  "value_kind": "empty_state",
+                  "source": {
+                    "kind": "unknown",
+                    "store_selector": "activities.reduce(max, a => max(a.strainScore ?? 0), 0)",
+                    "db_table": null,
+                    "algorithm": null
+                  },
+                  "notes": null
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

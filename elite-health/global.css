@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* OLED True Black base — prevents grey bleed on OLED displays */
+html, body, #root {
+  background-color: #000000;
+}

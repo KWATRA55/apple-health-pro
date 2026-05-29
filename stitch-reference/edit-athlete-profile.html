@@ -1,0 +1,306 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Edit Profile - Elite Health AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#353535",
+                        "surface": "#131313",
+                        "outline-variant": "#3e4946",
+                        "on-secondary-container": "#bab4da",
+                        "on-tertiary-fixed": "#001f2a",
+                        "error": "#ffb4ab",
+                        "tertiary-container": "#bee9ff",
+                        "surface-container-high": "#2a2a2a",
+                        "secondary": "#c8c2e9",
+                        "on-error-container": "#ffdad6",
+                        "surface-dim": "#131313",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#1e4c5f",
+                        "on-error": "#690005",
+                        "surface-container": "#1f1f1f",
+                        "surface-variant": "#353535",
+                        "on-background": "#e2e2e2",
+                        "tertiary-fixed-dim": "#a1cde3",
+                        "secondary-fixed-dim": "#c8c2e9",
+                        "tertiary": "#ffffff",
+                        "surface-bright": "#393939",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary": "#ffffff",
+                        "outline": "#879390",
+                        "primary-container": "#96f3e1",
+                        "primary-fixed-dim": "#7ad7c6",
+                        "on-secondary-fixed": "#1b1735",
+                        "on-tertiary-container": "#3f6a7d",
+                        "primary-fixed": "#96f3e1",
+                        "on-surface-variant": "#bdc9c5",
+                        "secondary-fixed": "#e5deff",
+                        "inverse-surface": "#e2e2e2",
+                        "inverse-on-surface": "#303030",
+                        "surface-container-low": "#1b1b1b",
+                        "on-primary-container": "#007164",
+                        "tertiary-fixed": "#bee9ff",
+                        "on-secondary": "#302c4b",
+                        "on-primary-fixed": "#00201b",
+                        "background": "#131313",
+                        "on-primary": "#003730",
+                        "secondary-container": "#494566",
+                        "on-surface": "#e2e2e2",
+                        "inverse-primary": "#006b5e",
+                        "on-primary-fixed-variant": "#005046",
+                        "on-secondary-fixed-variant": "#474363",
+                        "surface-tint": "#7ad7c6",
+                        "on-tertiary": "#003546"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "grid-gutter": "12px",
+                        "stack-gap": "16px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "metric-xl": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "mono": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "metric-xl": ["56px", { "lineHeight": "1", "letterSpacing": "-0.05em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #e2e2e2;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.12);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:focus-within {
+            border-color: #7ad7c6;
+            box-shadow: 0 0 15px rgba(122, 215, 198, 0.15) inset;
+        }
+
+        .glass-input {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            width: 100%;
+            outline: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 8px 0;
+            transition: border-color 0.3s ease;
+        }
+
+        .glass-input:focus {
+            border-bottom-color: #7ad7c6;
+            box-shadow: 0 1px 0 0 #7ad7c6;
+        }
+        
+        .glass-input::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        .ambient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: radial-gradient(circle at 50% 0%, rgba(122, 215, 198, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 100% 50%, rgba(150, 243, 225, 0.03) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #7ad7c6;
+            cursor: pointer;
+            margin-top: -6px;
+            box-shadow: 0 0 10px rgba(122, 215, 198, 0.5);
+        }
+
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="font-body-md min-h-screen">
+<div class="ambient-bg"></div>
+<!-- Top Navigation (Contextual, No BottomNav for editing flow) -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-xl bg-surface/10 border-b border-white/10 px-container-padding py-4 flex justify-between items-center h-[72px]">
+<button aria-label="Go back" class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center p-2 -ml-2 rounded-full hover:bg-white/5">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md tracking-tight text-primary">Edit Profile</h1>
+<button class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed-dim hover:text-primary-fixed drop-shadow-[0_0_8px_rgba(122,215,198,0.4)] transition-all">Save</button>
+</header>
+<main class="pt-[96px] pb-24 px-container-padding max-w-2xl mx-auto space-y-stack-gap">
+<!-- Avatar Section -->
+<div class="flex flex-col items-center justify-center py-6">
+<div class="relative group cursor-pointer">
+<div class="w-24 h-24 rounded-full overflow-hidden border border-white/20 relative">
+<img alt="Current profile photo" class="w-full h-full object-cover" data-alt="A high-contrast, moody portrait of an elite female athlete looking directly at the camera. The lighting is cinematic with deep shadows and soft, cool highlights, adhering to the dark-mode glassmorphism aesthetic. The background is pure OLED black. The subject has a calm, intense expression indicative of clinical focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZlaJfQUGA654k5TMFih65OnoYDX0KiKOYasUlDUwWIyZYMVG2_fb9zyc9s1r41Y0OBVYR-MfPxIawMnWPfxnB5-Sl1VRx5tGI-5tVkJBQZk6JdFEi6jWDkTN-c6ZMHxXL9QPwZ90g6MSjAtgjT7AtasrGU14BeMDKhp0wRA-fX6LcBowf55K1EVYk-CxgfiWeMiIowtk9Ll8_3NBF_wmEC8VfNI7nRam9ASpoSwZcmq-E48V76-AMr_TaEtJRHUvnWIatF6KSnMlM">
+<div class="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 0;">photo_camera</span>
+</div>
+</div>
+<button class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed-dim mt-4 w-full text-center hover:opacity-80 transition-opacity">Edit Photo</button>
+</div>
+</div>
+<!-- Personal Info -->
+<section class="glass-card rounded-xl p-6 space-y-6">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant/60">Personal Identity</h2>
+<div class="space-y-4">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block">Full Name</label>
+<input class="glass-input font-body-lg text-body-lg" type="text" value="Sarah Mitchell">
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block">Specialization</label>
+<input class="glass-input font-body-lg text-body-lg" type="text" value="Triathlon &amp; Longevity">
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block">Location</label>
+<input class="glass-input font-body-lg text-body-lg" type="text" value="Austin, TX">
+</div>
+</div>
+</section>
+<!-- Physical Biometrics -->
+<section class="glass-card rounded-xl p-6 space-y-6">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant/60">Clinical Biometrics</h2>
+<div class="grid grid-cols-2 gap-6">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block">Height (cm)</label>
+<input class="glass-input font-mono text-body-lg" type="number" value="172">
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block">Weight (kg)</label>
+<input class="glass-input font-mono text-body-lg" step="0.1" type="number" value="64">
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block">Biological Age</label>
+<div class="relative">
+<input class="glass-input font-mono text-body-lg text-primary-fixed-dim pointer-events-none border-b-primary-fixed-dim/30" readonly="" type="number" value="28">
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-primary-fixed-dim/50 text-sm" style="font-variation-settings: 'FILL' 0;">lock</span>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant mb-1 block">Gender</label>
+<select class="glass-input font-body-lg text-body-lg appearance-none bg-transparent cursor-pointer" value="f">
+<option class="bg-surface text-white" value="f">Female</option>
+<option class="bg-surface text-white" value="m">Male</option>
+<option class="bg-surface text-white" value="o">Other</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Goal Settings -->
+<section class="glass-card rounded-xl p-6 space-y-8">
+<h2 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant/60">Optimization Goals</h2>
+<div class="space-y-4">
+<div class="flex justify-between items-center mb-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Daily Strain Target</label>
+<span class="font-mono text-primary-fixed-dim" id="strain-val">14.5</span>
+</div>
+<input max="21" min="10" oninput="document.getElementById('strain-val').innerText = this.value" step="0.1" type="range" value="14.5">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant/40 mt-1">
+<span class="">Recovery</span>
+<span class="">Peak Output</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center mb-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Bedtime Preference</label>
+<span class="font-mono text-primary-fixed-dim" id="bedtime-val">22:30</span>
+</div>
+<input max="26" min="20" oninput="
+                    let h = Math.floor(this.value);
+                    let m = (this.value % 1 === 0) ? '00' : '30';
+                    let displayH = h &gt;= 24 ? h - 24 : h;
+                    document.getElementById('bedtime-val').innerText = displayH.toString().padStart(2, '0') + ':' + m;
+                " step="0.5" type="range" value="22.5">
+</div>
+</section>
+<!-- Account & Privacy -->
+<section class="glass-card rounded-xl overflow-hidden">
+<a class="flex items-center justify-between p-4 border-b border-white/10 hover:bg-white/5 transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">favorite</span>
+<span class="font-body-md text-body-md text-primary">Sync HealthKit</span>
+</div>
+<div class="w-10 h-6 bg-primary-container/20 rounded-full relative">
+<div class="absolute right-1 top-1 w-4 h-4 bg-primary-fixed-dim rounded-full shadow-[0_0_8px_rgba(122,215,198,0.6)]"></div>
+</div>
+</a>
+<a class="flex items-center justify-between p-4 border-b border-white/10 hover:bg-white/5 transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">shield</span>
+<span class="font-body-md text-body-md text-primary">Privacy Settings</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/50 group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-4 hover:bg-white/5 transition-colors group" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">download</span>
+<span class="font-body-md text-body-md text-primary">Export Data (CSV)</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant/50 group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">chevron_right</span>
+</a>
+</section>
+</main>
+
+
+</body></html>

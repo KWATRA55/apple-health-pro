@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elite Health AI - Monthly Summary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#393939",
+                        "secondary-fixed-dim": "#c8c2e9",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary": "#003546",
+                        "surface-container-low": "#1b1b1b",
+                        "on-surface": "#e2e2e2",
+                        "on-tertiary-container": "#3f6a7d",
+                        "tertiary-container": "#bee9ff",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-container": "#bab4da",
+                        "on-secondary-fixed": "#1b1735",
+                        "surface-dim": "#131313",
+                        "surface-container": "#1f1f1f",
+                        "background": "#131313",
+                        "error-container": "#93000a",
+                        "primary-fixed-dim": "#7ad7c6",
+                        "outline-variant": "#3e4946",
+                        "secondary-fixed": "#e5deff",
+                        "on-tertiary-fixed": "#001f2a",
+                        "inverse-primary": "#006b5e",
+                        "tertiary-fixed-dim": "#a1cde3",
+                        "surface-container-highest": "#353535",
+                        "outline": "#879390",
+                        "primary-fixed": "#96f3e1",
+                        "on-secondary": "#302c4b",
+                        "on-tertiary-fixed-variant": "#1e4c5f",
+                        "on-error": "#690005",
+                        "surface-variant": "#353535",
+                        "on-secondary-fixed-variant": "#474363",
+                        "surface-tint": "#7ad7c6",
+                        "surface": "#131313",
+                        "on-primary-fixed": "#00201b",
+                        "inverse-on-surface": "#303030",
+                        "secondary": "#c8c2e9",
+                        "secondary-container": "#494566",
+                        "on-background": "#e2e2e2",
+                        "on-primary-container": "#007164",
+                        "surface-container-high": "#2a2a2a",
+                        "primary": "#ffffff",
+                        "error": "#ffb4ab",
+                        "tertiary": "#ffffff",
+                        "primary-container": "#96f3e1",
+                        "on-surface-variant": "#bdc9c5",
+                        "on-primary": "#003730",
+                        "inverse-surface": "#e2e2e2",
+                        "tertiary-fixed": "#bee9ff",
+                        "on-primary-fixed-variant": "#005046"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-gap": "16px",
+                        "grid-gutter": "12px",
+                        "unit": "4px",
+                        "container-padding": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "metric-xl": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "metric-xl": ["56px", { "lineHeight": "1", "letterSpacing": "-0.05em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #000000; color: #e2e2e2; }
+        .glass-panel {
+            background-color: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border: 0.5px solid rgba(255, 255, 255, 0.12);
+        }
+        .mesh-bg {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1;
+            background: radial-gradient(circle at 20% 30%, rgba(150, 243, 225, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(190, 233, 255, 0.05) 0%, transparent 50%);
+            animation: breathe 20s infinite alternate;
+        }
+        @keyframes breathe { 0% { opacity: 0.7; } 100% { opacity: 1; } }
+        .chart-glow { filter: drop-shadow(0 0 8px rgba(150, 243, 225, 0.4)); }
+        .chart-glow-secondary { filter: drop-shadow(0 0 8px rgba(190, 233, 255, 0.4)); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="font-body-md antialiased overflow-x-hidden pt-20 pb-24 md:pt-24 md:pb-8">
+<div class="mesh-bg"></div>
+<!-- TopAppBar -->
+<header class="bg-surface/80 backdrop-blur-2xl text-primary font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg fixed top-0 w-full z-50 border-b border-white/10 flat no shadows transition-all duration-300 ease-out active:scale-95 flex items-center justify-between px-container-padding h-16 w-full max-w-screen-xl mx-auto">
+<button class="hover:bg-white/5 p-2 rounded-full flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<div class="flex items-center gap-3">
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center p-1"><span class="material-symbols-outlined text-[24px]">chevron_left</span></button>
+<h1 class="font-bold tracking-tight text-primary text-[20px] md:text-headline-lg">APRIL 2026</h1>
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center p-1"><span class="material-symbols-outlined text-[24px]">chevron_right</span></button>
+</div>
+<button class="hover:bg-white/5 p-2 rounded-full flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</header>
+<main class="max-w-screen-xl mx-auto px-container-padding grid grid-cols-4 md:grid-cols-12 gap-stack-gap md:gap-grid-gutter">
+<!-- Recovery Heatmap -->
+<section class="col-span-4 md:col-span-12 glass-panel rounded-xl p-6">
+<h2 class="font-label-sm text-label-sm text-on-surface-variant mb-4 uppercase">30-Day Recovery</h2>
+<div class="grid grid-cols-7 gap-2">
+<!-- Days of week -->
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant/60 mb-2">M</div>
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant/60 mb-2">T</div>
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant/60 mb-2">W</div>
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant/60 mb-2">T</div>
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant/60 mb-2">F</div>
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant/60 mb-2">S</div>
+<div class="text-center font-label-sm text-label-sm text-on-surface-variant/60 mb-2">S</div>
+<!-- Mock calendar cells (Green/Yellow/Red) -->
+<!-- Week 1 -->
+<div class="h-10 rounded bg-primary-fixed/20 border border-primary-fixed/50"></div>
+<div class="h-10 rounded bg-primary-fixed/40 border border-primary-fixed/60 shadow-[0_0_10px_rgba(150,243,225,0.2)]"></div>
+<div class="h-10 rounded bg-error/20 border border-error/50"></div>
+<div class="h-10 rounded bg-tertiary-fixed/30 border border-tertiary-fixed/50"></div>
+<div class="h-10 rounded bg-primary-fixed/80 border border-primary-fixed chart-glow"></div>
+<div class="h-10 rounded bg-primary-fixed/40 border border-primary-fixed/50"></div>
+<div class="h-10 rounded bg-tertiary-fixed/40 border border-tertiary-fixed/50"></div>
+<!-- Week 2 -->
+<div class="h-10 rounded bg-primary-fixed/60 border border-primary-fixed/50"></div>
+<div class="h-10 rounded bg-error/40 border border-error/60"></div>
+<div class="h-10 rounded bg-error/20 border border-error/50"></div>
+<div class="h-10 rounded bg-tertiary-fixed/50 border border-tertiary-fixed/50"></div>
+<div class="h-10 rounded bg-primary-fixed/70 border border-primary-fixed/50"></div>
+<div class="h-10 rounded bg-primary-fixed/90 border border-primary-fixed chart-glow"></div>
+<div class="h-10 rounded bg-primary-fixed/50 border border-primary-fixed/50"></div>
+<!-- Week 3 -->
+<div class="h-10 rounded bg-tertiary-fixed/30 border border-tertiary-fixed/50"></div>
+<div class="h-10 rounded bg-tertiary-fixed/60 border border-tertiary-fixed/50"></div>
+<div class="h-10 rounded bg-error/30 border border-error/50"></div>
+<div class="h-10 rounded bg-primary-fixed/40 border border-primary-fixed/50"></div>
+<div class="h-10 rounded bg-primary-fixed/80 border border-primary-fixed/50"></div>
+<div class="h-10 rounded bg-primary-fixed/60 border border-primary-fixed/50"></div>
+<div class="h-10 rounded bg-tertiary-fixed/40 border border-tertiary-fixed/50"></div>
+<!-- Week 4 -->
+<div class="h-10 rounded bg-error/50 border border-error/50"></div>
+<div class="h-10 rounded bg-error/20 border border-error/50"></div>
+<div class="h-10 rounded bg-tertiary-fixed/40 border border-tertiary-fixed/50"></div>
+<div class="h-10 rounded bg-primary-fixed/50 border border-primary-fixed/50"></div>
+<div class="h-10 rounded bg-primary-fixed/90 border border-primary-fixed chart-glow"></div>
+<div class="h-10 rounded bg-primary-fixed/70 border border-primary-fixed/50"></div>
+<div class="h-10 rounded bg-primary-fixed/80 border border-primary-fixed/50"></div>
+<!-- Week 5 -->
+<div class="h-10 rounded bg-tertiary-fixed/50 border border-tertiary-fixed/50"></div>
+<div class="h-10 rounded bg-primary-fixed/60 border border-primary-fixed/50"></div>
+<div class="h-10 rounded opacity-0"></div>
+<div class="h-10 rounded opacity-0"></div>
+<div class="h-10 rounded opacity-0"></div>
+<div class="h-10 rounded opacity-0"></div>
+<div class="h-10 rounded opacity-0"></div>
+</div>
+</section>
+<!-- Training Load vs Recovery Balance -->
+<section class="col-span-4 md:col-span-12 glass-panel rounded-xl p-6 flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<h2 class="font-label-sm text-label-sm text-on-surface-variant uppercase">Training Load vs Recovery Capacity</h2>
+<div class="flex gap-4">
+<div class="flex items-center gap-1.5"><div class="w-2.5 h-2.5 rounded bg-secondary-fixed/30 border border-secondary-fixed/50"></div><span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Strain</span></div>
+<div class="flex items-center gap-1.5"><div class="w-2.5 h-0.5 rounded-full bg-primary-fixed shadow-[0_0_8px_rgba(150,243,225,0.6)]"></div><span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Recovery</span></div>
+</div>
+</div>
+<div class="relative h-48 w-full mt-2 flex items-end">
+<!-- Bar Chart for Load -->
+<div class="absolute inset-0 flex items-end justify-between px-1 w-full gap-1">
+<div class="w-full bg-secondary-fixed/20 rounded-t-sm h-[30%] border-t border-secondary-fixed/40"></div>
+<div class="w-full bg-secondary-fixed/20 rounded-t-sm h-[45%] border-t border-secondary-fixed/40"></div>
+<div class="w-full bg-secondary-fixed/20 rounded-t-sm h-[65%] border-t border-secondary-fixed/40"></div>
+<div class="w-full bg-secondary-fixed/20 rounded-t-sm h-[50%] border-t border-secondary-fixed/40"></div>
+<div class="w-full bg-secondary-fixed/30 rounded-t-sm h-[85%] border-t border-secondary-fixed/60"></div>
+<div class="w-full bg-secondary-fixed/30 rounded-t-sm h-[95%] border-t border-secondary-fixed/60"></div>
+<div class="w-full bg-secondary-fixed/20 rounded-t-sm h-[60%] border-t border-secondary-fixed/40"></div>
+<div class="w-full bg-secondary-fixed/20 rounded-t-sm h-[40%] border-t border-secondary-fixed/40"></div>
+<div class="w-full bg-secondary-fixed/20 rounded-t-sm h-[55%] border-t border-secondary-fixed/40"></div>
+<div class="w-full bg-secondary-fixed/20 rounded-t-sm h-[75%] border-t border-secondary-fixed/40"></div>
+<div class="w-full bg-secondary-fixed/20 rounded-t-sm h-[80%] border-t border-secondary-fixed/40"></div>
+<div class="w-full bg-secondary-fixed/20 rounded-t-sm h-[45%] border-t border-secondary-fixed/40"></div>
+</div>
+<!-- Line chart for Recovery -->
+<svg class="absolute inset-0 w-full h-full preserve-3d" preserveaspectratio="none" viewbox="0 0 100 50">
+<path class="chart-glow" d="M0,40 Q10,35 18,38 T36,25 T54,40 T72,15 T90,20 T100,10" fill="none" stroke="#96f3e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<circle cx="72" cy="15" fill="#131313" r="1.5" stroke="#96f3e1" stroke-width="1"></circle>
+<circle cx="100" cy="10" fill="#131313" r="1.5" stroke="#96f3e1" stroke-width="1"></circle>
+</svg>
+<!-- Y-axis lines -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none border-b border-white/10 pb-0">
+<div class="w-full border-t border-white/5 h-0"></div>
+<div class="w-full border-t border-white/5 h-0"></div>
+<div class="w-full border-t border-white/5 h-0"></div>
+<div class="w-full border-t border-white/5 h-0"></div>
+</div>
+</div>
+</section>
+<!-- Autonomic Balance Analysis -->
+<section class="col-span-4 md:col-span-12 glass-panel rounded-xl p-6">
+<h2 class="font-label-sm text-label-sm text-on-surface-variant uppercase mb-5">Autonomic Nervous System Balance</h2>
+<div class="flex items-center gap-5 mb-5">
+<div class="relative w-20 h-20 shrink-0">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-error/20" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path>
+<path class="text-tertiary-fixed chart-glow-secondary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="68, 100" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-label-sm text-[12px] text-tertiary-fixed font-bold leading-none tracking-wider">PSNS</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant leading-none mt-1">68%</span>
+</div>
+</div>
+<div class="flex-1">
+<p class="font-body-md text-body-md text-primary font-medium mb-1.5">Parasympathetic Dominance</p>
+<p class="font-label-sm text-[13px] text-on-surface-variant/80 leading-relaxed">HRV markers indicate a prolonged restorative phase. Sympathetic (SNS) activation peaked during mid-month strain, followed by an efficient 68% parasympathetic recovery rebound.</p>
+</div>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-error/60 w-[32%] transition-all duration-1000"></div>
+<div class="h-full bg-tertiary-fixed w-[68%] transition-all duration-1000 chart-glow-secondary"></div>
+</div>
+<div class="flex justify-between mt-2.5 font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">
+<span class="flex items-center gap-1"><div class="w-1.5 h-1.5 rounded-full bg-error/60"></div>Stress (SNS)</span>
+<span class="flex items-center gap-1"><div class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed"></div>Recovery (PSNS)</span>
+</div>
+</section>
+<!-- VO2 Max Trend -->
+<section class="col-span-4 md:col-span-6 glass-panel rounded-xl p-6 flex flex-col justify-between h-64">
+<div class="flex justify-between items-start">
+<h2 class="font-label-sm text-label-sm text-on-surface-variant uppercase">VO2 Max Trajectory</h2>
+<div class="flex items-center gap-1 text-primary-fixed">
+<span class="material-symbols-outlined text-[16px]" data-icon="trending_up">trending_up</span>
+<span class="font-label-sm text-label-sm">+1.2 mL/kg/min</span>
+</div>
+</div>
+<div class="font-metric-xl text-metric-xl text-primary">54.8</div>
+<div class="relative h-24 w-full mt-4 flex items-end border-b border-white/10">
+<!-- SVG path representation for visual purposes -->
+<svg class="w-full h-full preserve-3d" preserveaspectratio="none" viewbox="0 0 100 50">
+<path class="chart-glow" d="M0,40 Q20,35 40,30 T80,20 L100,15" fill="none" stroke="#96f3e1" stroke-linecap="round" stroke-width="2"></path>
+<path d="M80,20 L100,5" fill="none" stroke="#bee9ff" stroke-dasharray="2 2" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+</div>
+</section>
+<!-- Biological Age Delta -->
+<section class="col-span-4 md:col-span-6 glass-panel rounded-xl p-6 flex flex-col justify-between h-64">
+<h2 class="font-label-sm text-label-sm text-on-surface-variant uppercase">Bio-Age Progression</h2>
+<div class="flex items-baseline gap-2">
+<span class="font-metric-xl text-metric-xl text-tertiary-fixed">-0.4</span>
+<span class="font-body-lg text-body-lg text-on-surface-variant">Yrs</span>
+</div>
+<div class="flex gap-2 items-end h-24 mt-4 border-b border-white/10 pb-2">
+<div class="w-1/4 bg-white/10 rounded-t-sm h-16 relative"><div class="absolute -top-6 w-full text-center font-label-sm text-label-sm text-on-surface-variant/50">W1</div></div>
+<div class="w-1/4 bg-white/10 rounded-t-sm h-14 relative"><div class="absolute -top-6 w-full text-center font-label-sm text-label-sm text-on-surface-variant/50">W2</div></div>
+<div class="w-1/4 bg-white/10 rounded-t-sm h-10 relative"><div class="absolute -top-6 w-full text-center font-label-sm text-label-sm text-on-surface-variant/50">W3</div></div>
+<div class="w-1/4 bg-tertiary-fixed/80 rounded-t-sm h-6 relative chart-glow"><div class="absolute -top-6 w-full text-center font-label-sm text-label-sm text-primary">W4</div></div>
+</div>
+</section>
+<!-- Habit Adherence Rings -->
+<section class="col-span-4 md:col-span-12 glass-panel rounded-xl p-6 flex flex-col gap-6">
+<h2 class="font-label-sm text-label-sm text-on-surface-variant uppercase">Core Habits Adherence</h2>
+<div class="grid grid-cols-3 gap-4 justify-items-center">
+<!-- Ring 1 -->
+<div class="flex flex-col items-center gap-3">
+<div class="relative w-20 h-20">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-primary-fixed/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+<path class="text-primary-fixed chart-glow" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="85, 100" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-body-lg text-body-lg text-primary">85%</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center">Sleep Quality</span>
+</div>
+<!-- Ring 2 -->
+<div class="flex flex-col items-center gap-3">
+<div class="relative w-20 h-20">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-tertiary-fixed/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+<path class="text-tertiary-fixed chart-glow" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="92, 100" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-body-lg text-body-lg text-primary">92%</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center">Hydration</span>
+</div>
+<!-- Ring 3 -->
+<div class="flex flex-col items-center gap-3">
+<div class="relative w-20 h-20">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-secondary-fixed-dim/10" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="4"></path>
+<path class="text-secondary-fixed-dim chart-glow" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="64, 100" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-body-lg text-body-lg text-primary">64%</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-center">Meditation</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="md:hidden bg-surface/80 backdrop-blur-2xl text-primary font-label-sm text-label-sm fixed bottom-0 w-full z-50 rounded-t-xl border-t border-white/10 shadow-2xl flex justify-around items-center px-4 py-3 pb-safe w-full transition-all duration-200 active:scale-90">
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Daily</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100">
+<span class="material-symbols-outlined" data-icon="ecg_heart">ecg_heart</span>
+<span>Vitals</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1.5 shadow-[0_0_15px_rgba(150,243,225,0.3)] hover:opacity-100">
+<span class="material-symbols-outlined" data-icon="Assignment">assignment</span>
+<span>Reports</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+<span>Plan</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100">
+<span class="material-symbols-outlined" data-icon="person_book">person_book</span>
+<span>Profile</span>
+</div>
+</nav>
+</body></html>
